@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WatchingAbroad — Coming Soon</title>
-    <meta name="description" content="Practical guides for watching your home TV and streaming services while abroad.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; line-height: 1.6; }
-        .container { max-width: 600px; padding: 2rem; text-align: center; }
-        h1 { font-size: 2rem; color: #f8fafc; margin-bottom: 0.5rem; }
-        p { color: #94a3b8; margin-bottom: 1.5rem; }
-        .tag { display: inline-block; background: #1e293b; color: #38bdf8; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.875rem; }
-        .deadline { margin-top: 2rem; padding: 1rem; border: 1px solid #334155; border-radius: 0.5rem; font-size: 0.875rem; color: #64748b; }
-        .deadline strong { color: #f87171; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchingAbroad — Watch TV Abroad, Clearly Explained</title>
+  <meta name="description" content="Clear, practical guides for watching your home TV and streaming services while abroad. Smart DNS, VPNs, device setup, and troubleshooting explained without hype.">
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: #0f1b2d;
+      --text: #eef5ff;
+      --muted: #9eb0c7;
+      --accent: #38bdf8;
+      --line: #233149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 72px 24px 56px; }
+    .badge { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+    h1 { font-size: clamp(40px, 7vw, 72px); line-height: .98; margin: 14px 0 22px; max-width: 820px; }
+    .lead { font-size: 21px; color: var(--muted); max-width: 720px; margin-bottom: 34px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 42px 0; }
+    .card { background: rgba(15, 27, 45, .82); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .card h2 { font-size: 19px; margin: 0 0 8px; }
+    .card p { margin: 0; color: var(--muted); }
+    .promise { border-top: 1px solid var(--line); padding-top: 26px; color: var(--muted); max-width: 760px; }
+    .promise strong { color: var(--text); }
+    footer { margin-top: 54px; color: #718096; font-size: 14px; }
+    a { color: var(--accent); }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <span class="tag">🚧 Under Construction</span>
-        <h1>WatchingAbroad</h1>
-        <p>Practical guides for watching your home TV and streaming services while abroad — coming soon.</p>
-        <p style="font-size:0.875rem;color:#64748b;">Smart DNS comparisons · VPN guides · Device setups · Transparent reviews</p>
-        <div class="deadline">
-            <strong>Deadline:</strong> 1 August 2026 — EUR 1,000/month or this project shuts down.
-        </div>
-    </div>
+  <main>
+    <div class="badge">WatchingAbroad</div>
+    <h1>Watch your home TV abroad without the usual confusion.</h1>
+    <p class="lead">Practical, plain-English guides for expats, travellers, and families trying to understand Smart DNS, VPNs, streaming apps, device setup, and what actually works abroad.</p>
+
+    <section class="cards" aria-label="What WatchingAbroad covers">
+      <article class="card">
+        <h2>Smart DNS vs VPN</h2>
+        <p>Clear comparisons that explain speed, privacy, device support, and realistic limitations.</p>
+      </article>
+      <article class="card">
+        <h2>Device setup guides</h2>
+        <p>Apple TV, Fire TV, smart TVs, routers, phones, browsers, and the common traps.</p>
+      </article>
+      <article class="card">
+        <h2>Streaming troubleshooting</h2>
+        <p>Location errors, DNS leaks, blocked VPN servers, account-region issues, and practical checks.</p>
+      </article>
+    </section>
+
+    <section class="promise">
+      <p><strong>Editorial promise:</strong> we will separate tested facts from vendor claims, mark affiliate relationships clearly, and avoid pretending that any tool can guarantee access to every streaming service.</p>
+      <p>The first guides are being prepared now. If you are trying to watch home TV while abroad, this site is being built for you.</p>
+    </section>
+
+    <footer>
+      © 2026 WatchingAbroad. Independent guides. Affiliate disclosure will be shown clearly where commercial links appear.
+    </footer>
+  </main>
 </body>
 </html>

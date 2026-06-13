@@ -58,12 +58,21 @@ def check_file(path):
     if has_affiliate_links and not has_disclosure:
         issues.append("❌ Affiliate links found but no disclosure")
 
-    # 5. Check for overclaims
+    # 5. Check for overclaims (skip CSS and negations)
+    # Strip style blocks to avoid CSS false positives
+    clean_content = re.sub(r'<style[^>]*>.*?</style>', '', content, flags=re.DOTALL)
     overclaims = ["guarantee", "always works", "100%", "unblock any", "bypass all",
                   "never detected", "works with every"]
     for oc in overclaims:
-        if oc.lower() in content.lower():
-            issues.append(f"⚠️ Possible overclaim detected: '{oc}'")
+        if oc.lower() in clean_content.lower():
+            # Skip negated versions ("no X can guarantee", "cannot guarantee")
+            for line in clean_content.split('\n'):
+                if oc.lower() in line.lower():
+                    negations = ["no service can", "cannot guarantee", "no tool can",
+                                 "no guarantee", "can't guarantee"]
+                    is_negated = any(n in line.lower() for n in negations)
+                    if not is_negated:
+                        issues.append(f"⚠️ Possible overclaim: '{oc}' in: {line.strip()[:80]}")
 
     return issues
 

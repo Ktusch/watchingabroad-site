@@ -30,6 +30,8 @@
 > **Regel:** Brug KUN `admin@watchingabroad.com` i publiceret content hvis du skal have en kontaktadresse.  
 > **Brug aldrig** en email der ikke står i tabellen ovenfor.
 
+> **Opdateret 14. juni:** `mailto:admin@watchingabroad.com` er nu aktiv på `why-we-built-watchingabroad.html` — erstattet den tidligere `href="#"` placeholder.
+
 ---
 
 ## Site struktur

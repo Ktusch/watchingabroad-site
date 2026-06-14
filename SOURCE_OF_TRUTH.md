@@ -42,8 +42,9 @@ watchingabroad.com/
 ├── CNAME                         (watchingabroad.com)
 ├── .nojekyll
 └── guides/
-    ├── why-we-built-watchingabroad.html   ✅ LIVE (13. juni)
-    └── smart-dns-vs-vpn.html              ✅ LIVE (13. juni)
+    ├── why-we-built-watchingabroad.html               ✅ LIVE (13. juni)
+    ├── smart-dns-vs-vpn.html                          ✅ LIVE (13. juni)
+    └── how-to-setup-smart-dns-apple-tv-fire-tv-router.html  ✅ LIVE (14. juni)
 ```
 
 ---

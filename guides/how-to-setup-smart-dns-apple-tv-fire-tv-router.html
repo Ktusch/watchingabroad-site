@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Set Up Smart DNS on Apple TV, Fire TV, and Router — Device Setup Guide</title>
+  <meta name="description" content="Step-by-step guide to configuring Smart DNS on Apple TV, Amazon Fire TV, and your home router. Get your streaming services working abroad in minutes.">
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: #0f1b2d;
+      --text: #eef5ff;
+      --muted: #9eb0c7;
+      --accent: #38bdf8;
+      --line: #233149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
+    .back { margin-bottom: 32px; }
+    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 0 0 16px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 24px; margin: 40px 0 12px; color: var(--accent); }
+    h3 { font-size: 20px; margin: 32px 0 10px; color: #d6e3f5; }
+    p { margin: 0 0 18px; color: #d6e3f5; }
+    .highlight { background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 24px 0; }
+    .highlight p { margin: 0; color: var(--text); }
+    ol, ul { margin: 0 0 18px; padding-left: 20px; }
+    li { margin-bottom: 8px; color: #d6e3f5; }
+    strong { color: var(--text); }
+    code { background: rgba(15, 27, 45, 0.8); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #eef5ff; }
+    .tip-box { background: rgba(15, 27, 45, 0.8); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .tip-box h3 { margin: 0 0 12px; color: var(--accent); font-size: 18px; }
+    .tip-box ul { margin: 0; }
+    .tip-box li { margin-bottom: 10px; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: #718096; font-size: 14px; }
+    @media (max-width: 600px) { main { padding: 32px 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="back"><a href="/">← WatchingAbroad</a></div>
+    <h1>How to Set Up Smart DNS on Apple TV, Fire TV, and Your Router</h1>
+    <div class="meta">Published June 14, 2026 · Updated June 14, 2026 · 6 min read</div>
+
+    <p>You've picked a Smart DNS provider, signed up, and now you need to actually make it work. Good news: setup is usually simpler than configuring a VPN. Bad news: every device does it slightly differently, and one wrong number in a DNS field can leave you staring at a "Content not available in your region" error.</p>
+
+    <p>This guide walks through the three most common setup paths: Apple TV, Amazon Fire TV, and router-level configuration. Pick the one that matches your device.</p>
+
+    <div class="highlight">
+      <p><strong>Before you start:</strong> Make sure you have your Smart DNS provider's DNS server addresses handy. These are typically two IP addresses (primary and secondary) found in your account dashboard or welcome email. Some providers also require you to register your IP address on their site before the service activates.</p>
+    </div>
+
+    <h2>What Is Smart DNS, Really?</h2>
+    <p>Unlike a VPN, Smart DNS doesn't encrypt your traffic or change your visible IP address. Instead, it intercepts DNS queries for streaming services and reroutes them through a proxy server. To the streaming platform, it looks like you're still at home. To your internet provider, it looks like normal traffic.</p>
+
+    <p>This means:</p>
+    <ul>
+      <li><strong>Faster than VPN</strong> — no encryption overhead, no speed loss</li>
+      <li><strong>Works on devices that don't support VPN</strong> — Apple TV, smart TVs, game consoles</li>
+      <li><strong>Only affects streaming traffic</strong> — everything else uses your normal DNS</li>
+    </ul>
+
+    <h2>Setup 1: Apple TV</h2>
+    <p>Apple TV doesn't support VPN apps natively (unless you're running a router-level VPN), but it handles custom DNS settings just fine. Here's how.</p>
+
+    <ol>
+      <li><strong>Open Settings</strong> on your Apple TV home screen</li>
+      <li>Go to <strong>Network</strong> → select your active connection (Wi-Fi or Ethernet)</li>
+      <li>Set <strong>Configure DNS</strong> to <strong>Manual</strong></li>
+      <li>Enter the <strong>primary DNS server address</strong> from your Smart DNS provider</li>
+      <li>Enter the <strong>secondary DNS server address</strong> (the backup one)</li>
+      <li>Press <strong>Done</strong>, then test by opening a streaming app that previously showed a region error</li>
+    </ol>
+
+    <div class="tip-box">
+      <h3>📌 Apple TV tips</h3>
+      <ul>
+        <li>On older tvOS versions, the DNS setting is inside <strong>Settings → Network → Wi-Fi → Configure DNS</strong></li>
+        <li>If it doesn't work immediately, try <strong>restarting the Apple TV</strong> (Settings → System → Restart)</li>
+        <li>Some providers require you to <strong>register your Apple TV's IP address</strong> — check your provider's dashboard</li>
+        <li>Apple TV automatically updates DNS settings across all apps — no per-app configuration needed</li>
+      </ul>
+    </div>
+
+    <h2>Setup 2: Amazon Fire TV</h2>
+    <p>Fire TV runs a modified version of Android, and its DNS settings are a bit more hidden than on Apple TV — but they're there.</p>
+
+    <ol>
+      <li>Go to <strong>Settings</strong> → <strong>Network</strong></li>
+      <li>Select your active <strong>Wi-Fi network</strong></li>
+      <li>Scroll down and highlight your network name, then press the <strong>menu button</strong> (three horizontal lines) on your remote</li>
+      <li>Select <strong>Advanced</strong> from the popup menu</li>
+      <li>Set <strong>IP settings</strong> to <strong>Static</strong></li>
+      <li>You'll see fields for IP address, gateway, and DNS. Leave IP/gateway as-is unless you know what you're doing</li>
+      <li>Enter your Smart DNS provider's <strong>primary DNS</strong> in the first DNS field</li>
+      <li>Enter the <strong>secondary DNS</strong> in the second DNS field</li>
+      <li>Press <strong>Connect</strong> (or Save)</li>
+    </ol>
+
+    <div class="tip-box">
+      <h3>📌 Fire TV tips</h3>
+      <ul>
+        <li>Setting IP to <strong>Static</strong> is required to unlock manual DNS fields — but keep the IP and gateway values from DHCP unchanged</li>
+        <li>If the menu button doesn't work on your remote, try holding the <strong>Select button</strong> on your network name instead</li>
+        <li>Fire TV caches DNS aggressively — a <strong>full restart</strong> (unplug for 30 seconds) is often needed after changing DNS</li>
+        <li>Some Fire TV sticks (basic edition) hide manual DNS entirely — use router-level setup instead (Setup 3)</li>
+      </ul>
+    </div>
+
+    <h2>Setup 3: Router-Level (Works for Every Device)</h2>
+    <p>Router-level setup is the most reliable approach. Change DNS once on your router, and every device on your network — smart TVs, game consoles, streaming sticks — uses Smart DNS automatically. No per-device configuration needed.</p>
+
+    <h3>How to find your router's DNS settings</h3>
+    <ol>
+      <li><strong>Find your router's IP address</strong> — usually <code>192.168.0.1</code>, <code>192.168.1.1</code>, or <code>10.0.0.1</code>. Check the sticker on your router or run <code>ipconfig</code> (Windows) / <code>ifconfig</code> (Mac/Linux) and look for "Default Gateway" or "Router"</li>
+      <li><strong>Log into your router</strong> — open a browser, type the IP address, and enter your admin credentials (default username/password is often on the router sticker)</li>
+      <li><strong>Find the DNS settings</strong> — the exact location varies by router brand:
+        <ul>
+          <li><strong>TP-Link:</strong> Network → WAN → Advanced → DNS Settings</li>
+          <li><strong>ASUS:</strong> WAN → Internet Connection → DNS Server</li>
+          <li><strong>Netgear:</strong> Advanced → Setup → Internet Setup → Domain Name Server</li>
+          <li><strong>Linksys:</strong> Connectivity → Internet Settings → DNS</li>
+        </ul>
+      </li>
+      <li><strong>Set DNS to Manual</strong> (if there's an option between "Get automatically from ISP" and "Use the following DNS")</li>
+      <li><strong>Enter your Smart DNS provider's primary and secondary DNS addresses</strong></li>
+      <li><strong>Save and reboot</strong> the router</li>
+    </ol>
+
+    <div class="tip-box">
+      <h3>⚠️ Router setup considerations</h3>
+      <ul>
+        <li><strong>All devices on your network</strong> will use Smart DNS — if you only want it for your TV, consider Apple TV or Fire TV per-device setup instead</li>
+        <li>Some ISPs supply routers that <strong>ignore custom DNS settings</strong> — in that case, you may need a separate router or a travel router running DD-WRT</li>
+        <li>Router DNS changes can take <strong>5-10 minutes</strong> to propagate to all connected devices</li>
+        <li>Write down your original DNS settings before changing them, so you can revert if needed</li>
+      </ul>
+    </div>
+
+    <h2>Verifying Smart DNS Is Working</h2>
+    <p>After setup, here's how to confirm everything is running correctly:</p>
+
+    <ol>
+      <li><strong>Visit a DNS leak test site</strong> (like <code>dnsleaktest.com</code>) — it should show your Smart DNS provider's servers, not your ISP's</li>
+      <li><strong>Check your provider's status page</strong> — most Smart DNS providers have a "what's my IP/DNS" page in their dashboard that shows whether your configuration is active</li>
+      <li><strong>Try a streaming service</strong> that previously gave you a region error. If it works with no VPN speed loss, Smart DNS is configured correctly</li>
+    </ol>
+
+    <h2>Troubleshooting Common Issues</h2>
+
+    <h3>Smart DNS worked yesterday but stopped today</h3>
+    <p>Your public IP address may have changed (common with many ISPs). Most Smart DNS providers let you auto-update with a dynamic DNS client, or you can manually re-register your IP in their dashboard.</p>
+
+    <h3>Netflix/Disney+/BBC iPlayer still shows "not available"</h3>
+    <p>Streaming services actively block known Smart DNS IP addresses. Try your provider's alternative server addresses, or contact their support — they often have fallback servers for blocked regions. For very aggressive blocks, a VPN may work better.</p>
+
+    <h3>Some websites don't load after DNS change</h3>
+    <p>Try flushing your DNS cache. On the affected device, restart it fully. If the problem persists, your Smart DNS provider may be having an outage — switch to their secondary server temporarily.</p>
+
+    <div class="highlight">
+      <p><strong>Bottom line:</strong> Smart DNS setup is a five-minute job once you know where the settings live. Apple TV and Fire TV take a few clicks. Router setup takes a few more but covers every device in your home. If a service blocks your Smart DNS, keep your provider's alternative server list handy — and remember that VPN is the fallback when Smart DNS isn't enough.</p>
+    </div>
+
+    <p><em>Have a specific device or setup question? <a href="mailto:admin@watchingabroad.com">Drop us a note</a> — we're adding guides based on reader questions.</em></p>
+
+    <footer>
+      <p>© 2026 WatchingAbroad. Independent guides for watching your home TV abroad. <a href="/">Back to homepage →</a></p>
+    </footer>
+  </main>
+</body>
+</html>

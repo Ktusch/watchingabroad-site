@@ -41,6 +41,8 @@ watchingabroad.com/
 ├── index.html                    (landing page)
 ├── CNAME                         (watchingabroad.com)
 ├── .nojekyll
+├── sitemap.xml                     (4 URLs, opdateret 14. juni)
+├── robots.txt                      (Allow: /, Sitemap: /sitemap.xml)
 └── guides/
     ├── why-we-built-watchingabroad.html               ✅ LIVE (13. juni)
     ├── smart-dns-vs-vpn.html                          ✅ LIVE (13. juni)

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://watchingabroad.com/sitemap.xml

@@ -53,7 +53,7 @@ watchingabroad.com/
 
 | Nuværende | Status |
 |---|---|
-| Smart DNS Proxy | ❌ Ikke ansøgt endnu |
+| Smart DNS Proxy | 🔄 Afventer Kristian-godkendelse (14. juni) |
 | NordVPN | ❌ Ikke ansøgt endnu |
 | Surfshark | ❌ Ikke ansøgt endnu |
 

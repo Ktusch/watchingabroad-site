@@ -41,12 +41,15 @@ watchingabroad.com/
 ├── index.html                    (landing page)
 ├── CNAME                         (watchingabroad.com)
 ├── .nojekyll
-├── sitemap.xml                     (4 URLs, opdateret 14. juni)
-├── robots.txt                      (Allow: /, Sitemap: /sitemap.xml)
+├── sitemap.xml                   (7 URLs, opdateret 14. juni)
+├── robots.txt                    (Allow: /, Sitemap: /sitemap.xml)
 └── guides/
     ├── why-we-built-watchingabroad.html               ✅ LIVE (13. juni)
     ├── smart-dns-vs-vpn.html                          ✅ LIVE (13. juni)
-    └── how-to-setup-smart-dns-apple-tv-fire-tv-router.html  ✅ LIVE (14. juni)
+    ├── how-to-setup-smart-dns-apple-tv-fire-tv-router.html  ✅ LIVE (14. juni)
+    ├── best-smart-dns-streaming.html                  ✅ LIVE (14. juni)
+    ├── watch-streaming-while-travelling-checklist.html ✅ LIVE (14. juni)
+    └── vpn-apple-tv-options-limitations-setup.html    ✅ LIVE (14. juni)
 ```
 
 ---

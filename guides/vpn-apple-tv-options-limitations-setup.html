@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN on Apple TV — Options, Limitations, and Setup Guide</title>
+  <meta name="description" content="Apple TV doesn't support VPN apps natively. Here's how to use a VPN on Apple TV anyway — router-level VPN, Smart DNS, media streaming DNS, and the honest trade-offs.">
+  <!-- GA4 tracking — Kristian: replace G-XXXXXXXXXX with your measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <style>
+    :root { --bg: #08111f; --panel: #0f1b2d; --text: #eef5ff; --muted: #9eb0c7; --accent: #38bdf8; --line: #233149; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
+      color: var(--text); line-height: 1.6; min-height: 100vh;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
+    .back { margin-bottom: 32px; }
+    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 0 0 16px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 24px; margin: 40px 0 12px; color: var(--accent); }
+    h3 { font-size: 20px; margin: 32px 0 10px; color: #d6e3f5; }
+    p { margin: 0 0 18px; color: #d6e3f5; }
+    .highlight { background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 24px 0; }
+    .highlight p { margin: 0; color: var(--text); }
+    .aff-note { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); border-radius: 12px; padding: 14px 18px; margin: 24px 0; font-size: 14px; color: #fcd34d; }
+    .aff-note strong { color: #fbbf24; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { color: var(--accent); font-weight: 600; background: rgba(15, 27, 45, 0.6); }
+    td { color: #d6e3f5; }
+    tr:last-child td { border-bottom: none; }
+    ul, ol { margin: 0 0 18px; padding-left: 20px; }
+    li { margin-bottom: 8px; color: #d6e3f5; }
+    strong { color: var(--text); }
+    code { background: rgba(15, 27, 45, 0.8); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #eef5ff; }
+    .option-box { background: rgba(15, 27, 45, 0.8); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .option-box h3 { margin: 0 0 8px; color: var(--accent); font-size: 20px; }
+    .option-box .tag { display: inline-block; background: rgba(56, 189, 248, 0.12); color: #38bdf8; font-size: 12px; padding: 3px 8px; border-radius: 6px; margin-bottom: 12px; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+    .pros, .cons { padding: 14px; border-radius: 12px; }
+    .pros { background: rgba(52, 211, 153, 0.06); border: 1px solid rgba(52, 211, 153, 0.2); }
+    .cons { background: rgba(251, 191, 36, 0.06); border: 1px solid rgba(251, 191, 36, 0.2); }
+    .pros p, .cons p { margin: 0 0 6px; font-size: 14px; }
+    .pros strong, .cons strong { display: block; margin-bottom: 4px; }
+    .pros ul, .cons ul { margin: 0; padding-left: 16px; font-size: 14px; }
+    .pros li, .cons li { margin-bottom: 4px; color: #d6e3f5; }
+    .verdict { background: rgba(15, 27, 45, 0.8); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .verdict h3 { margin: 0 0 12px; color: var(--accent); font-size: 18px; }
+    .btn { display: inline-block; background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 10px; padding: 10px 18px; text-decoration: none; font-weight: 600; font-size: 14px; margin: 4px 0; }
+    .btn:hover { background: rgba(56, 189, 248, 0.2); }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: #718096; font-size: 14px; }
+    @media (max-width: 600px) { main { padding: 32px 16px; } .pros-cons { grid-template-columns: 1fr; } table { font-size: 13px; } th, td { padding: 8px 10px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="back"><a href="/">← WatchingAbroad</a></div>
+    <h1>VPN on Apple TV — Options, Limitations, and Setup Guide</h1>
+    <div class="meta">Published June 14, 2026 · Updated June 14, 2026 · 8 min read</div>
+
+    <p>If you own an Apple TV and want to watch your home streaming content abroad, you've probably discovered the fundamental problem: <strong>Apple TV does not support VPN apps.</strong></p>
+
+    <p>There's no App Store VPN client for tvOS. Apple doesn't allow it. And no amount of tinkering with the Apple TV's settings will change that — there simply isn't a "VPN configuration" screen on the device.</p>
+
+    <p>But that doesn't mean you can't use a VPN with your Apple TV. There are several workarounds, each with its own trade-offs. Here's what actually works in 2026.</p>
+
+    <div class="highlight">
+      <p><strong>The quick answer:</strong> Use Smart DNS for Apple TV streaming — it's simpler, faster, and works natively. If you specifically need VPN-level encryption, use a router-level VPN or a travel router. There is no Apple TV VPN app, and third-party "smart DNS that looks like VPN" services come with serious privacy risks.</p>
+    </div>
+
+    <h2>The Options Compared</h2>
+
+    <table>
+      <tr>
+        <th>Method</th>
+        <th>Complexity</th>
+        <th>Encryption</th>
+        <th>Speed impact</th>
+        <th>Cost (extra)</th>
+      </tr>
+      <tr>
+        <td><strong>Smart DNS</strong></td>
+        <td>Low — 2 min setup</td>
+        <td>No</td>
+        <td>Minimal</td>
+        <td>$3-7/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Router-level VPN</strong></td>
+        <td>High — needs compatible router</td>
+        <td>Yes</td>
+        <td>10-50%</td>
+        <td>$0 (if you own a compatible router)</td>
+      </tr>
+      <tr>
+        <td><strong>Travel router (VPN)</strong></td>
+        <td>Medium — $50-80 for device</td>
+        <td>Yes</td>
+        <td>10-50%</td>
+        <td>$50-80 one-time</td>
+      </tr>
+      <tr>
+        <td><strong>Media streaming DNS</strong></td>
+        <td>Low — similar to Smart DNS</td>
+        <td>No</td>
+        <td>Minimal</td>
+        <td>$4-6/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Share VPN from computer</strong></td>
+        <td>Medium — need a computer running</td>
+        <td>Yes</td>
+        <td>Depends on host device</td>
+        <td>$0</td>
+      </tr>
+    </table>
+
+    <h2>Option 1: Smart DNS on Apple TV (Recommended)</h2>
+    <div class="option-box">
+      <span class="tag">Our top pick for Apple TV</span>
+      <h3>Smart DNS</h3>
+      <p>Smart DNS is the simplest and most reliable method for watching home TV on Apple TV abroad. Apple TV lets you change DNS settings natively — no router changes, no extra hardware, no configuration profiles.</p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <strong>✅ Pros</strong>
+          <ul>
+            <li>2-minute setup on Apple TV itself</li>
+            <li>No speed loss — full bandwidth preserved</li>
+            <li>Works in hotel rooms and Airbnbs</li>
+            <li>No extra hardware needed</li>
+            <li>Compatible with most streaming services (except Netflix)</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <strong>⚠️ Cons</strong>
+          <ul>
+            <li>No encryption/privacy</li>
+            <li>Doesn't work with Netflix</li>
+            <li>Requires IP re-registration when location changes</li>
+            <li>Only affects streaming — no privacy protection</li>
+          </ul>
+        </div>
+      </div>
+
+      <p><strong>Apple TV Smart DNS setup:</strong></p>
+      <ol>
+        <li>Sign up for a <a href="/guides/best-smart-dns-streaming.html">Smart DNS provider</a></li>
+        <li>Register your home IP address on their dashboard</li>
+        <li>On Apple TV: Settings → Network → Wi-Fi → Configure DNS → Manual</li>
+        <li>Enter your provider's DNS server addresses</li>
+        <li>Done — test with your streaming app</li>
+      </ol>
+
+      <p>For a more detailed walkthrough, see our <a href="/guides/how-to-setup-smart-dns-apple-tv-fire-tv-router.html">full Smart DNS setup guide</a>.</p>
+    </div>
+
+    <div class="aff-note">
+      <strong>Affiliate disclosure:</strong> The links in this guide are affiliate links. If you purchase through them, WatchingAbroad may earn a commission. Our recommendations are based on actual testing.
+    </div>
+
+    <h2>Option 2: Router-Level VPN (Full Encryption)</h2>
+    <div class="option-box">
+      <span class="tag">Best for privacy</span>
+      <h3>Router-Level VPN</h3>
+      <p>If you configure a VPN on your home (or travel) router, every device on that network — including Apple TV — is automatically protected and routed through the VPN. The Apple TV doesn't need to know a VPN exists; it just sees the internet from the VPN's location.</p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <strong>✅ Pros</strong>
+          <ul>
+            <li>Full encryption on all Apple TV traffic</li>
+            <li>Works with all streaming services (including Netflix)</li>
+            <li>No per-device configuration needed</li>
+            <li>Covers game consoles, smart TVs, and other VPN-less devices</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <strong>⚠️ Cons</strong>
+          <ul>
+            <li>Requires a router that supports VPN client mode</li>
+            <li>Setup is technical (flashing DD-WRT/OpenWrt or buying a pre-configured router)</li>
+            <li>Speed loss from VPN affects all devices, even those that don't need it</li>
+            <li>If the VPN disconnects, all devices lose internet until reconnection</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Router setup overview</h3>
+      <ol>
+        <li><strong>Check your router:</strong> Most ISP-provided routers don't support VPN clients. You need a router with OpenWrt, DD-WRT, or Asuswrt-Merlin firmware, or a pre-configured VPN router from a manufacturer like GL.iNet.</li>
+        <li><strong>Configure the VPN client:</strong> Log into your router's admin panel, find the VPN client section, and enter your VPN provider's configuration (usually a .ovpn or .conf file).</li>
+        <li><strong>Decide routing:</strong> You can route ALL traffic through the VPN, or use policy-based routing to only send specific devices (like Apple TV) through the VPN.</li>
+        <li><strong>Connect your Apple TV</strong> to the router's Wi-Fi or Ethernet — it will automatically use the VPN connection.</li>
+      </ol>
+    </div>
+
+    <h2>Option 3: Travel Router (Portable VPN)</h2>
+    <div class="option-box">
+      <span class="tag">Best for travellers</span>
+      <h3>Travel Router with VPN</h3>
+      <p>A travel router is a small, portable router that you connect to hotel or Airbnb Wi-Fi, and then connect your devices to the travel router's own network. Most travel routers support VPN client mode, so your Apple TV gets VPN protection even in a hotel room.</p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <strong>✅ Pros</strong>
+          <ul>
+            <li>Works in hotels, Airbnbs, coffee shops — anywhere with Wi-Fi</li>
+            <li>Encrypts all Apple TV traffic</li>
+            <li>Can also connect via hotel Ethernet for better reliability</li>
+            <li>One-time purchase, works with any VPN provider</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <strong>⚠️ Cons</strong>
+          <ul>
+            <li>Extra device to pack and charge</li>
+            <li>Requires basic configuration before travel</li>
+            <li>Some hotel captive portals complicate setup</li>
+            <li>Speed limited by travel router's hardware</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Recommended travel routers for Apple TV VPN: <strong>GL.iNet GL-MT3000</strong> (Beryl AX, supports WireGuard), <strong>GL.iNet GL-SFT1200</strong> (Opal, budget pick). Both support OpenVPN and WireGuard, have built-in VPN client configuration, and fit in a pocket.</p>
+    </div>
+
+    <h2>Option 4: Share VPN Connection from a Computer</h2>
+    <div class="option-box">
+      <h3>Connection Sharing</h3>
+      <p>If you have a laptop or Mac that's connected to a VPN, you can share that VPN connection with your Apple TV via Internet Sharing. This is a free option if you already have a VPN subscription.</p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <strong>✅ Pros</strong>
+          <ul>
+            <li>Free if you already have a VPN</li>
+            <li>Works with any VPN provider</li>
+            <li>No extra hardware needed</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <strong>⚠️ Cons</strong>
+          <ul>
+            <li>Your computer must stay on and connected</li>
+            <li>Setup can be fiddly</li>
+            <li>Not practical for everyday use</li>
+            <li>Shared connection may be slower</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>macOS → Apple TV (Ethernet)</h3>
+      <ol>
+        <li>Connect your Mac to the internet (Wi-Fi or Ethernet)</li>
+        <li>Connect your Mac to your Apple TV via Ethernet (or Thunderbolt bridge)</li>
+        <li>Connect your Mac to your VPN</li>
+        <li>Open System Settings → Sharing → Internet Sharing</li>
+        <li>Share from your active connection (Wi-Fi) to your Apple TV's connection (Ethernet)</li>
+        <li>Your Apple TV will now route through the VPN</li>
+      </ol>
+    </div>
+
+    <h2>Option 5: Media Streaming DNS (Hybrid)</h2>
+    <div class="option-box">
+      <h3>Media Streaming DNS</h3>
+      <p>Some providers offer what they call "media streaming DNS" — services like ControlD or NextDNS that let you create custom DNS filtering rules, including unblocking streaming services. These are essentially Smart DNS with more granular control.</p>
+
+      <p><strong>How it works:</strong> You create DNS rules that route specific streaming domains through proxy servers while leaving the rest of your traffic on your normal connection. This gives you more control than traditional Smart DNS and works on Apple TV the same way.</p>
+
+      <p><strong>Trade-off:</strong> Like Smart DNS, this method provides no encryption. It's a configuration tool, not a privacy tool. But for pure streaming access, it works well and gives you more visibility into what's being redirected.</p>
+    </div>
+
+    <h2>What NOT to Do</h2>
+    <p>A word of caution: there are services and apps that claim to install a VPN directly on Apple TV by sideloading configuration profiles or using DNS tricks. Be very skeptical of these:</p>
+
+    <ul>
+      <li><strong>Apple does not allow VPN configuration on tvOS.</strong> Any service that claims otherwise is either misrepresenting what they do (it's DNS, not VPN) or using unofficial methods that can break with a tvOS update.</li>
+      <li><strong>Some "Apple TV VPN" services</strong> are just DNS redirectors wrapped in marketing — they provide no encryption, no privacy, and you're paying for what Smart DNS already does for less money.</li>
+      <li><strong>DNS-based "VPN services" on Apple TV</strong> may log your traffic patterns because there's no encryption. Use a well-known provider with a verified no-logging policy.</li>
+    </ul>
+
+    <h2>Which Option Should You Choose?</h2>
+
+    <div class="verdict">
+      <h3>Our recommendation</h3>
+      <ul>
+        <li><strong>For most people:</strong> Smart DNS. It's fast, simple, and works on Apple TV natively. You'll lose Netflix access (use a laptop/phone VPN for that) but everything else works.</li>
+        <li><strong>For privacy-conscious users:</strong> Router-level VPN or travel router. Gives you full encryption and works with all streaming services.</li>
+        <li><strong>For travellers:</strong> Travel router + Smart DNS combo. Use Smart DNS for speed when streaming, and the travel router's VPN for sensitive traffic.</li>
+        <li><strong>For occasional use:</strong> Connection sharing from your laptop. It's free if you already have a VPN, but impractical for daily use.</li>
+      </ul>
+    </div>
+
+    <p><em>Last tested: June 2026. Apple TV and tvOS update their network stack periodically — we'll update this guide when things change.</em></p>
+
+    <footer>
+      <p>© 2026 WatchingAbroad. Independent guides. Some links on this page are affiliate links — if you purchase through them, we may earn a commission. <a href="/">Back to homepage →</a></p>
+    </footer>
+  </main>
+</body>
+</html>

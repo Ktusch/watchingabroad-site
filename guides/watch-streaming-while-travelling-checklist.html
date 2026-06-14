@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Watch Streaming Apps While Travelling — Practical Checklist</title>
+  <meta name="description" content="A complete checklist for watching your home streaming apps while travelling abroad. Pre-trip prep, device setup, Smart DNS, VPN tips, and troubleshooting steps.">
+  <!-- GA4 tracking — Kristian: replace G-XXXXXXXXXX with your measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <style>
+    :root { --bg: #08111f; --panel: #0f1b2d; --text: #eef5ff; --muted: #9eb0c7; --accent: #38bdf8; --line: #233149; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
+      color: var(--text); line-height: 1.6; min-height: 100vh;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
+    .back { margin-bottom: 32px; }
+    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 0 0 16px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 24px; margin: 40px 0 12px; color: var(--accent); }
+    h3 { font-size: 20px; margin: 32px 0 10px; color: #d6e3f5; }
+    p { margin: 0 0 18px; color: #d6e3f5; }
+    .highlight { background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 24px 0; }
+    .highlight p { margin: 0; color: var(--text); }
+    .aff-note { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); border-radius: 12px; padding: 14px 18px; margin: 24px 0; font-size: 14px; color: #fcd34d; }
+    .aff-note strong { color: #fbbf24; }
+    ol, ul { margin: 0 0 18px; padding-left: 20px; }
+    li { margin-bottom: 8px; color: #d6e3f5; }
+    strong { color: var(--text); }
+    .checklist { list-style: none; padding-left: 0; margin: 0 0 18px; }
+    .checklist li { padding: 14px 18px; margin-bottom: 10px; background: rgba(15, 27, 45, 0.6); border: 1px solid var(--line); border-radius: 12px; color: #d6e3f5; position: relative; }
+    .checklist li::before { content: "☐ "; color: var(--muted); font-size: 18px; }
+    .checklist li strong { display: block; margin-bottom: 4px; }
+    .checklist li .detail { display: block; font-size: 14px; color: var(--muted); }
+    .tip-box { background: rgba(15, 27, 45, 0.8); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .tip-box h3 { margin: 0 0 12px; color: var(--accent); font-size: 18px; }
+    .tip-box ul { margin: 0; }
+    .tip-box li { margin-bottom: 10px; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: #718096; font-size: 14px; }
+    @media (max-width: 600px) { main { padding: 32px 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="back"><a href="/">← WatchingAbroad</a></div>
+    <h1>How to Watch Streaming Apps While Travelling — A Practical Checklist</h1>
+    <div class="meta">Published June 14, 2026 · Updated June 14, 2026 · 7 min read</div>
+
+    <p>You're packing for a trip. Clothes — check. Charger — check. But what about your streaming access? Nothing kills a quiet evening in a hotel room faster than opening BBC iPlayer, DR TV, or Netflix and seeing that dreaded <em>"This content is not available in your region"</em> message.</p>
+
+    <p>This checklist covers everything you need to do before you leave, while you're travelling, and when things go wrong — so you can actually watch what you paid for, wherever you are.</p>
+
+    <div class="highlight">
+      <p><strong>Short version:</strong> Set up Smart DNS or a VPN before you travel. Test it before you leave. Pack a travel router if you need reliable access. The rest is troubleshooting for edge cases.</p>
+    </div>
+
+    <h2>Before You Travel — Pre-Trip Prep</h2>
+    <p>Do these at home, on your own Wi-Fi, where everything works. Fixing things while jet-lagged in a hotel lobby is much harder.</p>
+
+    <ul class="checklist">
+      <li>
+        <strong>☐ Choose your solution: Smart DNS or VPN</strong>
+        <span class="detail">If you're watching on a smart TV, Apple TV, or game console, Smart DNS is your only practical option. If you're watching on a laptop or phone, a VPN works fine. Our <a href="/guides/smart-dns-vs-vpn.html">Smart DNS vs VPN guide</a> helps you decide.</span>
+      </li>
+      <li>
+        <strong>☐ Sign up and set up before you go</strong>
+        <span class="detail">Create your account at home. Configure the service on your device. Register your home IP address if required. Test it with each streaming service you plan to use. See our <a href="/guides/best-smart-dns-streaming.html">Smart DNS comparison</a> for provider recommendations.</span>
+      </li>
+      <li>
+        <strong>☐ Test every streaming service you care about</strong>
+        <span class="detail">Don't just test one app — test BBC iPlayer, DR TV, Netflix, Disney+, or whatever you watch. Each service uses different geo-blocking technology. A service that unblocks one may not unblock another.</span>
+      </li>
+      <li>
+        <strong>☐ Write down your provider's alternative DNS servers</strong>
+        <span class="detail">If your primary server gets blocked, you'll need the backup ones. Save them in your phone's notes — you won't have email access if your hotel Wi-Fi requires a login page.</span>
+      </li>
+      <li>
+        <strong>☐ Install a VPN app on your phone</strong>
+        <span class="detail">Even if you're using Smart DNS for your TV, a VPN on your phone is essential for public Wi-Fi privacy. Hotel, airport, and coffee shop Wi-Fi networks are notoriously insecure.</span>
+      </li>
+      <li>
+        <strong>☐ Consider a travel router</strong>
+        <span class="detail">A small travel router (like a GL.iNet) can run a VPN client and create a secure Wi-Fi network for all your devices. This is the most reliable solution for frequent travellers — one device handles everything.</span>
+      </li>
+    </ul>
+
+    <div class="aff-note">
+      <strong>Affiliate disclosure:</strong> This guide contains affiliate links. If you purchase a service through one of our links, we may earn a commission. Our recommendations are based on actual testing.
+    </div>
+
+    <h2>At the Airport — Before You Land</h2>
+    <ul class="checklist">
+      <li>
+        <strong>☐ Download content offline (if available)</strong>
+        <span class="detail">BBC iPlayer, Netflix, Disney+, and many other services let you download content for offline viewing. Do this before you leave the country — downloaded content usually doesn't check your location until the license expires (typically every 7-30 days).</span>
+      </li>
+      <li>
+        <strong>☐ Check your VPN / Smart DNS subscription status</strong>
+        <span class="detail">Make sure your subscription hasn't expired and your payment method is valid. Nothing worse than landing and discovering your service lapsed while you were in the air.</span>
+      </li>
+    </ul>
+
+    <h2>When You Arrive — First Steps at Your Destination</h2>
+    <ul class="checklist">
+      <li>
+        <strong>☐ Check your public IP address</strong>
+        <span class="detail">Visit whatismyip.com or dnsleaktest.com from your device. If your Smart DNS provider requires IP registration, check whether your new IP needs to be added. Some providers auto-detect IP changes, but many don't.</span>
+      </li>
+      <li>
+        <strong>☐ Re-register your IP with your Smart DNS provider (if needed)</strong>
+        <span class="detail">Most Smart DNS providers require you to update your registered IP address when you connect from a new location. This takes about 30 seconds in their dashboard but is the most common reason Smart DNS stops working after travel.</span>
+      </li>
+      <li>
+        <strong>☐ Flush DNS cache on your device</strong>
+        <span class="detail">Devices cache DNS results aggressively. If streaming services still show your old location, flush the DNS cache:<br>
+        <em>Apple TV:</em> Settings → System → Restart<br>
+        <em>Fire TV:</em> Unplug for 30 seconds<br>
+        <em>Windows:</em> Open Command Prompt → <code>ipconfig /flushdns</code><br>
+        <em>macOS:</em> Terminal → <code>sudo dscacheutil -flushcache</code></span>
+      </li>
+      <li>
+        <strong>☐ Connect your VPN (if using one)</strong>
+        <span class="detail">Open your VPN app, connect to a server in your home country, and verify your IP shows the correct location. Some VPNs have "fast connect" that may connect you to a local server — manually pick a server at home.</span>
+      </li>
+      <li>
+        <strong>☐ Test one streaming service at a time</strong>
+        <span class="detail">Open the app you care about most first. If it works, move to the next one. If it doesn't, try an alternative DNS server or VPN server before troubleshooting further.</span>
+      </li>
+    </ul>
+
+    <h2>Dealing with Hotel Wi-Fi — The Biggest Problem</h2>
+    <p>Hotel Wi-Fi is unreliable, slow, and often requires a login page (captive portal) that blocks non-browser traffic. Here's how to handle it:</p>
+
+    <ul>
+      <li><strong>Use the hotel's wired Ethernet if available</strong> — many hotels have Ethernet jacks behind the TV or desk. An Ethernet-to-USB adapter for your laptop or travel router is more reliable than Wi-Fi.</li>
+      <li><strong>Re-register your IP after connecting</strong> — hotel Wi-Fi typically assigns a different public IP than your home or mobile connection.</li>
+      <li><strong>If Smart DNS doesn't work on hotel Wi-Fi</strong>, try switching to a VPN instead. Some hotel networks block non-standard DNS ports.</li>
+      <li><strong>Use a travel router for hotel rooms</strong> — connect it to the hotel's Wi-Fi via its WAN interface, then connect your devices to the travel router's private network. This also lets you use a VPN on devices that don't support VPN natively.</li>
+      <li><strong>If captive portals block your VPN</strong>, try switching to WireGuard protocol, which looks more like normal HTTPS traffic and often bypasses portal-based blocks.</li>
+    </ul>
+
+    <div class="tip-box">
+      <h3>🏨 Hotel Wi-Fi Quick Fix</h3>
+      <ul>
+        <li>Step 1: Connect to hotel Wi-Fi, complete the captive portal login in your browser</li>
+        <li>Step 2: Test normal internet access (open any website)</li>
+        <li>Step 3: Enable your VPN or verify Smart DNS</li>
+        <li>Step 4: If blocked, try changing DNS to <code>1.1.1.1</code> (Cloudflare) or <code>8.8.8.8</code> (Google) temporarily</li>
+        <li>Step 5: If still blocked, switch from VPN to Smart DNS or vice versa</li>
+      </ul>
+    </div>
+
+    <h2>Common Problems and Quick Fixes</h2>
+
+    <h3>"This content is not available in your region"</h3>
+    <ul>
+      <li>Check that your VPN is connected to the correct country — not the nearest server</li>
+      <li>Re-register your IP with your Smart DNS provider</li>
+      <li>Restart your streaming app (force close, reopen)</li>
+      <li>Try a different DNS server or VPN server</li>
+    </ul>
+
+    <h3>Streaming works but is buffering constantly</h3>
+    <ul>
+      <li>Hotel Wi-Fi is likely slow — try lowering streaming quality to 720p</li>
+      <li>If using a VPN, try a server closer to your destination (not your home country)</li>
+      <li>Switch from VPN to Smart DNS — Smart DNS has no encryption overhead and preserves your full bandwidth</li>
+    </ul>
+
+    <h3>App says I'm offline when I have Wi-Fi</h3>
+    <ul>
+      <li>Some streaming apps check DNS before connecting — if DNS isn't resolving correctly, they show "offline"</li>
+      <li>Try switching to public DNS (1.1.1.1) temporarily, then switch back to your Smart DNS</li>
+      <li>Restart the device completely</li>
+    </ul>
+
+    <h3>VPN connects but streaming still shows my actual location</h3>
+    <ul>
+      <li>You have a DNS leak — the app is checking DNS instead of IP</li>
+      <li>Enable the VPN's built-in DNS leak protection, or manually set DNS to your VPN provider's DNS servers</li>
+      <li>Some streaming apps also check WebRTC — test your setup at browserleaks.com</li>
+    </ul>
+
+    <h2>The Ultimate Setup for Frequent Travellers</h2>
+    <div class="tip-box">
+      <h3>🌟 Our recommended travel setup</h3>
+      <ul>
+        <li><strong>Travel router</strong> (GL.iNet GL-MT3000 or similar) — $50-80</li>
+        <li><strong>Smart DNS subscription</strong> on the router for TV/console streaming</li>
+        <li><strong>VPN app on your phone and laptop</strong> for when you need privacy or Smart DNS is blocked</li>
+        <li><strong>Offline downloads</strong> of your favourite shows as backup</li>
+        <li><strong>A notes file</strong> with your provider's support page, alternative DNS servers, and common fixes</li>
+      </ul>
+      <p>This combo handles almost every situation: hotel Wi-Fi, Airbnbs, mobile hotspots, conference networks. You can set up the travel router once, and it just works everywhere.</p>
+    </div>
+
+    <p><em>Last tested: June 2026. Travel situations vary widely — if you find a scenario this checklist doesn't cover, <a href="mailto:admin@watchingabroad.com">let us know</a> and we'll add it.</em></p>
+
+    <footer>
+      <p>© 2026 WatchingAbroad. Independent guides. <a href="/">Back to homepage →</a></p>
+    </footer>
+  </main>
+</body>
+</html>

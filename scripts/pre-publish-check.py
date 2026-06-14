@@ -10,6 +10,10 @@ import re, sys, os
 # Known valid emails (from SOURCE_OF_TRUTH.md)
 VALID_EMAILS = {"admin@watchingabroad.com", "atlas@watchingabroad.com"}
 VALID_PATHS = {"/", "/guides/why-we-built-watchingabroad.html", "/guides/smart-dns-vs-vpn.html",
+               "/guides/how-to-setup-smart-dns-apple-tv-fire-tv-router.html",
+               "/guides/best-smart-dns-streaming.html",
+               "/guides/watch-streaming-while-travelling-checklist.html",
+               "/guides/vpn-apple-tv-options-limitations-setup.html",
                "/guides/", "/SOURCE_OF_TRUTH.md"}
 
 def check_file(path):
@@ -41,7 +45,8 @@ def check_file(path):
             if not link.endswith(".html") and not link == "/":
                 continue
             # Check if the file exists in the repo
-            local_path = os.path.join(os.path.dirname(path) or ".", link.lstrip("/"))
+            repo_root = os.path.dirname(os.path.dirname(path)) if "/guides/" in path else os.path.dirname(path) or "."
+            local_path = os.path.join(repo_root, link.lstrip("/"))
             if not os.path.exists(local_path):
                 issues.append(f"⚠️ Internal link may not exist: {link}")
 

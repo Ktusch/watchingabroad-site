@@ -14,7 +14,7 @@
 | DNS | Simply.com nameservers (ns1-4.simply.com) |
 | Udløb | 1. august 2026 (sammenfaldende med kill switch) |
 | Hosting | GitHub Pages (Ktusch/watchingabroad-site) |
-| HTTPS | ✅ Let's Encrypt via GitHub Pages |
+| HTTPS | ✅ Let's Encrypt via GitHub Pages — VERIFICERET 14. juni 2026 |
 
 ---
 

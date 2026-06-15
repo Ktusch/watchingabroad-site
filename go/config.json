@@ -1,0 +1,56 @@
+{
+  "comment": "Affiliate redirect config — WatchingAbroad. Update target_url when Kristian provides real affiliate links.",
+  "version": 1,
+  "updated": "2026-06-15",
+  "vendors": {
+    "smart-dns-proxy": {
+      "name": "Smart DNS Proxy",
+      "target_url": "",
+      "campaign": "smart-dns-proxy",
+      "status": "pending-password",
+      "note": "Self-serve affiliate. Requires Kristian to create account."
+    },
+    "nordvpn": {
+      "name": "NordVPN",
+      "target_url": "",
+      "campaign": "nordvpn",
+      "status": "pending-approval",
+      "note": "Apply via CJ Affiliate. Requires site with 5+ articles first."
+    },
+    "surfshark": {
+      "name": "Surfshark",
+      "target_url": "",
+      "campaign": "surfshark",
+      "status": "pending-approval",
+      "note": "40% rev share via Impact Radius. Apply after 5 articles live."
+    },
+    "pia": {
+      "name": "Private Internet Access",
+      "target_url": "",
+      "campaign": "pia",
+      "status": "pending",
+      "note": "Tier 2. Apply after Tier 1 is live."
+    },
+    "cyberghost": {
+      "name": "CyberGhost",
+      "target_url": "",
+      "campaign": "cyberghost",
+      "status": "pending",
+      "note": "Tier 2. Kape-owned — disclose clearly."
+    },
+    "vyprvpn": {
+      "name": "VyprVPN",
+      "target_url": "",
+      "campaign": "vyprvpn",
+      "status": "pending",
+      "note": "Tier 2. Good for streaming audience."
+    },
+    "windscribe": {
+      "name": "Windscribe",
+      "target_url": "",
+      "campaign": "windscribe",
+      "status": "pending",
+      "note": "Tier 2. 30% rev share, good free tier."
+    }
+  }
+}

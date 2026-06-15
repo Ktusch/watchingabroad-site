@@ -41,8 +41,23 @@ watchingabroad.com/
 ├── index.html                    (landing page)
 ├── CNAME                         (watchingabroad.com)
 ├── .nojekyll
-├── sitemap.xml                   (8 URLs, opdateret 15. juni)
+├── sitemap.xml                   (10 URLs, opdateret 15. juni)
 ├── robots.txt                    (Allow: /, Sitemap: /sitemap.xml)
+├── disclosure/
+│   └── index.html                (EU affiliate disclosure page ✅ 15. juni)
+├── go/
+│   ├── index.html                (affiliate redirect landing page)
+│   ├── config.json               (vendor config — update target_url når links er aktive)
+│   ├── smart-dns-proxy/index.html
+│   ├── nordvpn/index.html
+│   ├── surfshark/index.html
+│   ├── pia/index.html
+│   ├── cyberghost/index.html
+│   ├── vyprvpn/index.html
+│   └── windscribe/index.html
+├── scripts/
+│   ├── pre-publish-check.py      (compliance checker)
+│   └── generate-affiliate-redirects.py  (gen. redirect pages from config.json)
 └── guides/
     ├── why-we-built-watchingabroad.html               ✅ LIVE (13. juni)
     ├── smart-dns-vs-vpn.html                          ✅ LIVE (13. juni)
@@ -55,16 +70,20 @@ watchingabroad.com/
 
 ---
 
-## Affiliate-programmer (tilmeldt)
+## Affiliate-programmer
 
-| Nuværende | Status |
+| Område | Status |
 |---|---|
-| Smart DNS Proxy | 🔄 Afventer Kristian-godkendelse (15. juni) — self-serve, skal bruge password |
-| NordVPN | ❌ Ikke ansøgt endnu |
-| Surfshark | ❌ Ikke ansøgt endnu |
+| Smart DNS Proxy | 🔴 Afventer Kristian-godkendelse (self-serve, skal bruge password) |
+| NordVPN | ❌ Ikke ansøgt — kræver 5+ artikler + Kristian approval |
+| Surfshark | ❌ Ikke ansøgt — kræver Kristian approval |
+| /go/ redirect infrastructure | ✅ Bygget — 7 vendor redirect pages live, config-drevet |
+| /disclosure/ page | ✅ Bygget — EU compliance klar, fuld disclosure side live |
+| Accessible from footer | ✅ index.html footer opdateret med disclosure + go links |
 | EU disclosure research | ✅ Done — se docs/eu-affiliate-disclosure-compliance.md |
 
-Indtil affiliate-ansøgninger er godkendt: **ingen kommercielle links der lover kommission.**  
+**Indtil affiliate-ansøgninger er godkendt:** `go/config.json` har tomme `target_url` felter — redirect pages viser "Coming soon" placeholder.  
+**Når Kristian leverer affiliate URLs:** opdater `go/config.json` og kør `scripts/generate-affiliate-redirects.py`.  
 Brug `rel="nofollow sponsored"` på affiliate links når de er aktive.
 
 ---

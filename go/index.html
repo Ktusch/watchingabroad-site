@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchingAbroad — Affiliate Links & Redirects</title>
+  <meta name="description" content="Affiliate link redirects for recommended streaming and VPN services on WatchingAbroad.">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: #0f1b2d;
+      --text: #eef5ff;
+      --muted: #9eb0c7;
+      --accent: #38bdf8;
+      --line: #233149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
+    .badge { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+    h1 { font-size: clamp(28px, 4vw, 36px); line-height: 1.1; margin: 8px 0 8px; }
+    .lead { color: var(--muted); font-size: 16px; margin-bottom: 32px; }
+    .vendor-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+    .vendor {
+      background: rgba(15, 27, 45, .82);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .vendor .info h2 { margin: 0; font-size: 16px; font-weight: 600; }
+    .vendor .info p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+    .vendor .status { font-size: 12px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+    .status-active { background: rgba(74, 222, 128, 0.12); color: #4ade80; }
+    .status-pending { background: rgba(251, 191, 36, 0.12); color: #fbbf24; }
+    .status-inactive { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
+    .back { margin-bottom: 24px; }
+    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+    .disclosure-note {
+      background: rgba(15, 27, 45, .82);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 22px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .disclosure-note strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="back"><a href="/">← Back to WatchingAbroad</a></div>
+    <div class="badge">Affiliate Redirects</div>
+    <h1>Service Links</h1>
+    <p class="lead">This page lists all service links available on WatchingAbroad. When you click one of these links, you are redirected to the service's website. If you make a purchase, WatchingAbroad may earn a commission — at no extra cost to you.</p>
+
+    <div class="vendor-list" id="vendor-list">
+      <div style="color: var(--muted); font-size: 14px;">Loading redirect status...</div>
+    </div>
+
+    <div class="disclosure-note">
+      <strong>Affiliate disclosure:</strong> WatchingAbroad participates in affiliate programs. When you click links on this site and make a purchase, we may earn a commission. This does not affect our recommendations — every service we link to is tested and evaluated based on its actual performance for watching TV abroad. <a href="/disclosure/" style="color: var(--accent);">Full disclosure →</a>
+    </div>
+  </main>
+
+  <script>
+    fetch('/go/config.json')
+      .then(r => r.json())
+      .then(config => {
+        const vendors = config.vendors;
+        const list = document.getElementById('vendor-list');
+        list.innerHTML = '';
+        Object.keys(vendors).forEach(slug => {
+          const v = vendors[slug];
+          const hasUrl = v.target_url && v.target_url.length > 0;
+          const statusClass = hasUrl ? 'status-active' : 'status-pending';
+          const statusText = hasUrl ? '🔗 Active' : '⏳ Coming soon';
+          const linkPart = hasUrl
+            ? `<a href="/go/${slug}/" style="color: var(--accent); font-size: 13px;">Visit →</a>`
+            : `<span style="color: #718096; font-size: 13px;">—</span>`;
+          list.innerHTML += `
+            <div class="vendor">
+              <div class="info">
+                <h2>${v.name}</h2>
+                <p>${v.note || ''}</p>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span class="status ${statusClass}">${statusText}</span>
+                ${linkPart}
+              </div>
+            </div>
+          `;
+        });
+      })
+      .catch(e => {
+        document.getElementById('vendor-list').innerHTML = '<div style="color: #ef4444; font-size: 14px;">Could not load redirect config.</div>';
+      });
+  </script>
+</body>
+</html>

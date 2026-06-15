@@ -1,0 +1,13 @@
+# WatchingAbroad Rank Tracker
+# Template: copy to Google Sheets once API is enabled
+# Instructions: https://sheets.new -> Import -> Upload this CSV
+# Then share with kt@medtech-advisors.com
+
+Date,Keyword,URL,Current Position,Previous Position,Search Volume,Notes
+2026-06-14,smart dns vs vpn,https://watchingabroad.com/guides/smart-dns-vs-vpn.html,,,,"First article published"
+2026-06-14,watch tv abroad,https://watchingabroad.com/,,,,
+2026-06-14,streaming abroad guide,https://watchingabroad.com/guides/why-we-built-watchingabroad.html,,,,
+2026-06-14,smart dns for streaming,https://watchingabroad.com/guides/smart-dns-vs-vpn.html,,,,
+2026-06-14,vpn for streaming abroad,https://watchingabroad.com/guides/smart-dns-vs-vpn.html,,,,
+2026-06-14,best dns for expats,https://watchingabroad.com/guides/smart-dns-vs-vpn.html,,,,
+2026-06-14,bypass geo restrictions streaming,https://watchingabroad.com/,,,,

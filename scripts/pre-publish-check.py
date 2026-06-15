@@ -14,6 +14,7 @@ VALID_PATHS = {"/", "/guides/why-we-built-watchingabroad.html", "/guides/smart-d
                "/guides/best-smart-dns-streaming.html",
                "/guides/watch-streaming-while-travelling-checklist.html",
                "/guides/vpn-apple-tv-options-limitations-setup.html",
+               "/guides/best-vpn-for-expats-2026.html",
                "/guides/", "/SOURCE_OF_TRUTH.md"}
 
 def check_file(path):

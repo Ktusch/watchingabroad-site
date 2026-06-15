@@ -76,8 +76,8 @@ watchingabroad.com/
 | Område | Status |
 |---|---|
 | Smart DNS Proxy | 🔴 Afventer Kristian-godkendelse (self-serve, skal bruge password) |
-| NordVPN | ❌ Ikke ansøgt — kræver 5+ artikler + Kristian approval |
-| Surfshark | ❌ Ikke ansøgt — kræver Kristian approval |
+| NordVPN | ❌ Ikke ansøgt — 5+ artikel-prerequisite ✅ (8 guides live nu) — kræver Kristian approval |
+| Surfshark | ❌ Ikke ansøgt — 5+ artikel-prerequisite ✅ — kræver Kristian approval |
 | /go/ redirect infrastructure | ✅ Bygget — 7 vendor redirect pages live, config-drevet |
 | /disclosure/ page | ✅ Bygget — EU compliance klar, fuld disclosure side live |
 | Accessible from footer | ✅ index.html footer opdateret med disclosure + go links |

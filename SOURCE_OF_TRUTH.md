@@ -51,7 +51,10 @@ watchingabroad.com/
 │   ├── smart-dns-proxy/index.html
 │   ├── nordvpn/index.html
 │   ├── surfshark/index.html
+│   ├── private-internet-access/index.html  🆕
 │   ├── pia/index.html
+│   ├── ipvanish/index.html                  🆕
+│   ├── hotspot-shield/index.html            🆕
 │   ├── cyberghost/index.html
 │   ├── vyprvpn/index.html
 │   └── windscribe/index.html
@@ -78,7 +81,7 @@ watchingabroad.com/
 | Smart DNS Proxy | 🔴 Afventer Kristian-godkendelse (self-serve, skal bruge password) |
 | NordVPN | ❌ Ikke ansøgt — 5+ artikel-prerequisite ✅ (8 guides live nu) — kræver Kristian approval |
 | Surfshark | ❌ Ikke ansøgt — 5+ artikel-prerequisite ✅ — kræver Kristian approval |
-| /go/ redirect infrastructure | ✅ Bygget — 7 vendor redirect pages live, config-drevet |
+| /go/ redirect infrastructure | ✅ Bygget — 10 vendor redirect pages live (3 nye: PIA, IPVanish, Hotspot Shield), config-drevet |
 | /disclosure/ page | ✅ Bygget — EU compliance klar, fuld disclosure side live |
 | Accessible from footer | ✅ index.html footer opdateret med disclosure + go links |
 | EU disclosure research | ✅ Done — se docs/eu-affiliate-disclosure-compliance.md |

@@ -59,9 +59,10 @@ watchingabroad.com/
 
 | Nuværende | Status |
 |---|---|
-| Smart DNS Proxy | 🔄 Afventer Kristian-godkendelse (14. juni) |
+| Smart DNS Proxy | 🔄 Afventer Kristian-godkendelse (15. juni) — self-serve, skal bruge password |
 | NordVPN | ❌ Ikke ansøgt endnu |
 | Surfshark | ❌ Ikke ansøgt endnu |
+| EU disclosure research | ✅ Done — se docs/eu-affiliate-disclosure-compliance.md |
 
 Indtil affiliate-ansøgninger er godkendt: **ingen kommercielle links der lover kommission.**  
 Brug `rel="nofollow sponsored"` på affiliate links når de er aktive.

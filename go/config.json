@@ -24,7 +24,7 @@
       "status": "pending-approval",
       "note": "40% rev share via Impact Radius. Apply after 5 articles live."
     },
-    "pia": {
+    "private-internet-access": {
       "name": "Private Internet Access",
       "target_url": "",
       "campaign": "pia",
@@ -44,6 +44,20 @@
       "campaign": "vyprvpn",
       "status": "pending",
       "note": "Tier 2. Good for streaming audience."
+    },
+    "ipvanish": {
+      "name": "IPVanish",
+      "target_url": "",
+      "campaign": "ipvanish",
+      "status": "pending",
+      "note": "Tier 2. Good for streaming audience."
+    },
+    "hotspot-shield": {
+      "name": "Hotspot Shield",
+      "target_url": "",
+      "campaign": "hotspot-shield",
+      "status": "pending",
+      "note": "Tier 2. Apply after Tier 1 is live."
     },
     "windscribe": {
       "name": "Windscribe",

@@ -65,7 +65,8 @@ watchingabroad.com/
     ├── best-smart-dns-streaming.html                  ✅ LIVE (14. juni)
     ├── watch-streaming-while-travelling-checklist.html ✅ LIVE (14. juni)
     ├── vpn-apple-tv-options-limitations-setup.html    ✅ LIVE (14. juni)
-    └── best-vpn-for-expats-2026.html                   ✅ LIVE (15. juni)
+    ├── best-vpn-for-expats-2026.html                   ✅ LIVE (15. juni)
+    └── how-to-watch-bbc-iplayer-abroad.html            ✅ LIVE (15. juni) — schema.org markup: Article + BreadcrumbList + FAQPage (8 questions)
 ```
 
 ---

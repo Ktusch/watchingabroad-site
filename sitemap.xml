@@ -4,6 +4,7 @@
   <url>
     <loc>https://watchingabroad.com/</loc>
     <priority>1.0</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
 
   <!-- Guides -->
@@ -15,26 +16,32 @@
   <url>
     <loc>https://watchingabroad.com/guides/smart-dns-vs-vpn.html</loc>
     <priority>0.9</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/how-to-setup-smart-dns-apple-tv-fire-tv-router.html</loc>
     <priority>0.8</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/best-smart-dns-streaming.html</loc>
     <priority>0.9</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/watch-streaming-while-travelling-checklist.html</loc>
     <priority>0.8</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/vpn-apple-tv-options-limitations-setup.html</loc>
     <priority>0.8</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/best-vpn-for-expats-2026.html</loc>
     <priority>0.9</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/guides/how-to-watch-bbc-iplayer-abroad.html</loc>
@@ -53,47 +60,58 @@
   <url>
     <loc>https://watchingabroad.com/go/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
 
   <!-- /go/ vendor redirect pages -->
   <url>
     <loc>https://watchingabroad.com/go/cyberghost/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/hotspot-shield/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/ipvanish/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/nordvpn/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/pia/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/private-internet-access/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/smart-dns-proxy/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/surfshark/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/vyprvpn/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
   <url>
     <loc>https://watchingabroad.com/go/windscribe/</loc>
     <priority>0.3</priority>
+    <lastmod>2026-06-15</lastmod>
   </url>
 </urlset>

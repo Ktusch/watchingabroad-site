@@ -1,112 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WatchingAbroad — Affiliate Links & Redirects</title>
-  <meta name="description" content="Affiliate link redirects for recommended streaming and VPN services on WatchingAbroad.">
-  <meta name="robots" content="noindex, nofollow">
-  <style>
-    :root {
-      --bg: #08111f;
-      --panel: #0f1b2d;
-      --text: #eef5ff;
-      --muted: #9eb0c7;
-      --accent: #38bdf8;
-      --line: #233149;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: radial-gradient(circle at top left, #15314f 0, var(--bg) 42%);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
-    .badge { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
-    h1 { font-size: clamp(28px, 4vw, 36px); line-height: 1.1; margin: 8px 0 8px; }
-    .lead { color: var(--muted); font-size: 16px; margin-bottom: 32px; }
-    .vendor-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
-    .vendor {
-      background: rgba(15, 27, 45, .82);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .vendor .info h2 { margin: 0; font-size: 16px; font-weight: 600; }
-    .vendor .info p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
-    .vendor .status { font-size: 12px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-    .status-active { background: rgba(74, 222, 128, 0.12); color: #4ade80; }
-    .status-pending { background: rgba(251, 191, 36, 0.12); color: #fbbf24; }
-    .status-inactive { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
-    .back { margin-bottom: 24px; }
-    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
-    .back a:hover { text-decoration: underline; }
-    .disclosure-note {
-      background: rgba(15, 27, 45, .82);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 18px 22px;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .disclosure-note strong { color: var(--text); }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WatchingAbroad — Affiliate Links & Redirects</title>
+<meta name="description" content="Affiliate link redirects for recommended streaming and VPN services on WatchingAbroad."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/design-system.css"/>
+<style>
+  .vendor-list { display: flex; flex-direction: column; gap: var(--space-sm); margin: var(--space-xl) 0; }
+  .vendor-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--wa-bg-raised); border: 1px solid var(--wa-border-light);
+    border-radius: var(--radius-lg); padding: var(--space-md) var(--space-lg);
+    gap: var(--space-md);
+  }
+  .vendor-row h3 { font-size: var(--fs-body-lg); font-weight: var(--fw-semibold); color: var(--wa-text); margin: 0; }
+  .vendor-row .note { font-size: var(--fs-body-sm); color: var(--wa-text-muted); margin-top: 2px; }
+  .status-active { background: rgba(122, 229, 130, 0.1); color: var(--wa-success); }
+  .status-pending { background: rgba(255, 209, 102, 0.08); color: var(--wa-warning); }
+  .status-inactive { background: rgba(255, 180, 171, 0.08); color: var(--wa-error); }
+  @media (max-width: 600px) { .vendor-row { flex-direction: column; align-items: flex-start; } }
+</style>
 </head>
 <body>
-  <main>
-    <div class="back"><a href="/">← Back to WatchingAbroad</a></div>
-    <div class="badge">Affiliate Redirects</div>
-    <h1>Service Links</h1>
-    <p class="lead">This page lists all service links available on WatchingAbroad. When you click one of these links, you are redirected to the service's website. If you make a purchase, WatchingAbroad may earn a commission — at no extra cost to you.</p>
+
+<!-- ═══ Navigation ═══ -->
+<nav class="wa-nav" id="navbar">
+  <div class="wa-nav-inner">
+    <a href=".." class="wa-nav-brand">WatchingAbroad</a>
+    <div class="wa-nav-links">
+      <a href="../#guides">Guides</a>
+      <a href="../#vpn-reviews">VPN Reviews</a>
+    </div>
+  </div>
+</nav>
+
+<section class="section" style="padding-top: calc(4rem + var(--space-3xl));">
+  <div class="container-narrow">
+    <p><a href=".." style="font-size:var(--fs-body-sm);">← Back to WatchingAbroad</a></p>
+    <span class="badge badge-outline" style="margin-top:var(--space-lg);">Affiliate Redirects</span>
+    <h1 class="headline-lg" style="margin-top:var(--space-sm); margin-bottom:var(--space-md);">Service Links</h1>
+    <p class="body-lg" style="color:var(--wa-text-muted); margin-bottom:var(--space-xl);">
+      This page lists all service links available on WatchingAbroad. When you click one of these links, you are redirected to the service's website. If you make a purchase, WatchingAbroad may earn a commission — at no extra cost to you.
+    </p>
 
     <div class="vendor-list" id="vendor-list">
-      <div style="color: var(--muted); font-size: 14px;">Loading redirect status...</div>
+      <div style="color:var(--wa-text-muted); font-size:var(--fs-body-sm);">Loading redirect status...</div>
     </div>
 
-    <div class="disclosure-note">
-      <strong>Affiliate disclosure:</strong> WatchingAbroad participates in affiliate programs. When you click links on this site and make a purchase, we may earn a commission. This does not affect our recommendations — every service we link to is tested and evaluated based on its actual performance for watching TV abroad. <a href="/disclosure/" style="color: var(--accent);">Full disclosure →</a>
+    <div class="callout" style="margin-top:var(--space-xl);">
+      <p><strong>Affiliate disclosure:</strong> WatchingAbroad participates in affiliate programs. When you click links on this site and make a purchase, we may earn a commission. This does not affect our recommendations — every service we link to is tested and evaluated based on its actual performance for watching TV abroad. <a href="../disclosure/">Full disclosure →</a></p>
     </div>
-  </main>
+  </div>
+</section>
 
-  <script>
-    fetch('/go/config.json')
-      .then(r => r.json())
-      .then(config => {
-        const vendors = config.vendors;
-        const list = document.getElementById('vendor-list');
-        list.innerHTML = '';
-        Object.keys(vendors).forEach(slug => {
-          const v = vendors[slug];
-          const hasUrl = v.target_url && v.target_url.length > 0;
-          const statusClass = hasUrl ? 'status-active' : 'status-pending';
-          const statusText = hasUrl ? '🔗 Active' : '⏳ Coming soon';
-          const linkPart = hasUrl
-            ? `<a href="/go/${slug}/" style="color: var(--accent); font-size: 13px;">Visit →</a>`
-            : `<span style="color: #718096; font-size: 13px;">—</span>`;
-          list.innerHTML += `
-            <div class="vendor">
-              <div class="info">
-                <h2>${v.name}</h2>
-                <p>${v.note || ''}</p>
-              </div>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span class="status ${statusClass}">${statusText}</span>
-                ${linkPart}
-              </div>
+<!-- ═══ Footer ═══ -->
+<footer class="wa-footer">
+  <div class="wa-footer-inner">
+    <div>
+      <div class="wa-footer-brand">WatchingAbroad</div>
+      <p style="font-size:var(--fs-body-sm); color:var(--wa-text-muted); margin-top:var(--space-xs);">Independent streaming guides for expats.</p>
+    </div>
+    <div class="wa-footer-links">
+      <a href="../disclosure/">Affiliate Disclosure</a>
+      <a href="../guides">All guides</a>
+    </div>
+    <div class="wa-footer-copy">© 2026 WatchingAbroad</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navbar') && window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  fetch('/go/config.json')
+    .then(r => r.json())
+    .then(config => {
+      const vendors = config.vendors;
+      const list = document.getElementById('vendor-list');
+      list.innerHTML = '';
+      Object.keys(vendors).forEach(slug => {
+        const v = vendors[slug];
+        const hasUrl = v.target_url && v.target_url.length > 0;
+        const statusClass = hasUrl ? 'status-active' : 'status-pending';
+        const statusText = hasUrl ? '🔗 Active' : '⏳ Coming soon';
+        const linkPart = hasUrl
+          ? `<a href="./${slug}/" class="btn btn-outline btn-small">Visit →</a>`
+          : `<span style="color:var(--wa-text-muted); font-size:var(--fs-body-sm);">—</span>`;
+        list.innerHTML += `
+          <div class="vendor-row">
+            <div>
+              <h3>${v.name}</h3>
+              <div class="note">${v.note || ''}</div>
             </div>
-          `;
-        });
-      })
-      .catch(e => {
-        document.getElementById('vendor-list').innerHTML = '<div style="color: #ef4444; font-size: 14px;">Could not load redirect config.</div>';
+            <div style="display:flex;align-items:center;gap:var(--space-md);flex-shrink:0;">
+              <span class="chip ${statusClass}">${statusText}</span>
+              ${linkPart}
+            </div>
+          </div>
+        `;
       });
-  </script>
+    })
+    .catch(e => {
+      document.getElementById('vendor-list').innerHTML = '<div style="color:var(--wa-error); font-size:var(--fs-body-sm);">Could not load redirect config.</div>';
+    });
+</script>
 </body>
 </html>

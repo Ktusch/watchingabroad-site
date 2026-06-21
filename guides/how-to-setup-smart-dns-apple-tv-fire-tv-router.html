@@ -45,6 +45,22 @@
     footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: #718096; font-size: 14px; }
     @media (max-width: 600px) { main { padding: 32px 16px; } }
   </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/design-system.css"/>
+<style>
+  /* Design system overrides for legacy guide styles */
+  :root {
+    --bg: var(--color-surface, #101415);
+    --panel: var(--color-surface-container, #1D2022);
+    --text: var(--color-on-surface, #E0E3E5);
+    --muted: var(--color-on-surface-variant, #BDC8D1);
+    --accent: var(--color-primary, #8ED5FF);
+    --line: var(--color-outline-variant, #3E484F);
+  }
+  body { background: var(--bg); font-family: var(--wa-font); }
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -89,8 +105,20 @@
     <meta name="twitter:description" content="Step-by-step guide to configuring Smart DNS on Apple TV, Amazon Fire TV, and your home router. Get streaming services working abroad in minutes." />
   </head>
 <body>
+
+<nav class="wa-nav" id="navbar">
+  <div class="wa-nav-inner">
+    <a href=".." class="wa-nav-brand">WatchingAbroad</a>
+    <div class="wa-nav-links">
+      <a href="../#guides">Guides</a>
+      <a href="../#vpn-reviews">VPN Reviews</a>
+      <a href="./">All articles</a>
+    </div>
+  </div>
+</nav>
+
   <main>
-    <div class="back"><a href="/">← WatchingAbroad</a></div>
+    <div class="back"><a href="..">← WatchingAbroad</a></div>
     <h1>How to Set Up Smart DNS on Apple TV, Fire TV, and Your Router</h1>
     <div class="meta">Published June 14, 2026 · Updated June 14, 2026 · 6 min read</div>
 
@@ -214,11 +242,31 @@
     </div>
 
     <p><em>Have a specific device or setup question? <a href="mailto:admin@watchingabroad.com">Drop us a note</a> — we're adding guides based on reader questions.</em></p>
-    <p>📖 <strong>Related guides:</strong> <a href="/guides/smart-dns-vs-vpn.html">Smart DNS vs VPN — which one actually works?</a> · <a href="/guides/best-smart-dns-streaming.html">Best Smart DNS services compared</a> · <a href="/guides/vpn-apple-tv-options-limitations-setup.html">VPN on Apple TV options</a></p>
+    <p>📖 <strong>Related guides:</strong> <a href="./smart-dns-vs-vpn.html">Smart DNS vs VPN — which one actually works?</a> · <a href="./best-smart-dns-streaming.html">Best Smart DNS services compared</a> · <a href="./vpn-apple-tv-options-limitations-setup.html">VPN on Apple TV options</a></p>
 
     <footer>
-      <p>© 2026 WatchingAbroad. Independent guides for watching your home TV abroad. <a href="/">Back to homepage →</a></p>
+      <p>© 2026 WatchingAbroad. Independent guides for watching your home TV abroad. <a href="..">Back to homepage →</a></p>
     </footer>
   </main>
+
+<footer class="wa-footer">
+  <div class="wa-footer-inner">
+    <div>
+      <div class="wa-footer-brand">WatchingAbroad</div>
+      <p style="font-size:var(--fs-body-sm); color:var(--wa-text-muted); margin-top:var(--space-xs);">Independent streaming guides for expats and travellers.</p>
+    </div>
+    <div class="wa-footer-links">
+      <a href="../disclosure/">Affiliate Disclosure</a>
+      <a href="./">All guides</a>
+    </div>
+    <div class="wa-footer-copy">© 2026 WatchingAbroad</div>
+  </div>
+</footer>
+<script>
+  document.getElementById('navbar') && window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
 </body>
 </html>

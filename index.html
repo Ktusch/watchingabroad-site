@@ -1,336 +1,318 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>WatchingAbroad | Watch Home TV Anywhere</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "on-tertiary-fixed-variant": "#3e4757",
-                "on-primary-container": "#004965",
-                "secondary": "#bfc6db",
-                "secondary-container": "#41495a",
-                "on-tertiary-container": "#3b4454",
-                "inverse-on-surface": "#2d3133",
-                "surface-tint": "#7bd0ff",
-                "on-primary": "#00354a",
-                "on-surface-variant": "#bdc8d1",
-                "on-primary-fixed-variant": "#004c69",
-                "secondary-fixed": "#dbe2f7",
-                "primary-fixed-dim": "#7bd0ff",
-                "on-background": "#e0e3e5",
-                "surface-variant": "#323537",
-                "tertiary-container": "#a9b1c4",
-                "surface": "#101415",
-                "primary-container": "#38bdf8",
-                "on-secondary": "#293140",
-                "on-error": "#690005",
-                "on-primary-fixed": "#001e2c",
-                "tertiary": "#c4cde0",
-                "surface-container-lowest": "#0b0f10",
-                "surface-container-low": "#191c1e",
-                "outline-variant": "#3e484f",
-                "surface-container-high": "#272a2c",
-                "on-tertiary": "#283140",
-                "secondary-fixed-dim": "#bfc6db",
-                "tertiary-fixed-dim": "#bec7da",
-                "primary-fixed": "#c4e7ff",
-                "surface-dim": "#101415",
-                "tertiary-fixed": "#dae3f7",
-                "on-surface": "#e0e3e5",
-                "on-secondary-fixed-variant": "#3f4757",
-                "error-container": "#93000a",
-                "on-tertiary-fixed": "#131c2a",
-                "on-secondary-fixed": "#141c2a",
-                "outline": "#87929a",
-                "on-error-container": "#ffdad6",
-                "background": "#101415",
-                "primary": "#8ed5ff",
-                "inverse-primary": "#00668a",
-                "inverse-surface": "#e0e3e5",
-                "error": "#ffb4ab",
-                "surface-container": "#1d2022",
-                "on-secondary-container": "#b0b8cc",
-                "surface-container-highest": "#323537",
-                "surface-bright": "#313949"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            "spacing": {
-                "stack-lg": "32px",
-                "stack-md": "16px",
-                "gutter": "24px",
-                "margin-mobile": "20px",
-                "stack-xs": "4px",
-                "margin-desktop": "40px",
-                "unit": "8px",
-                "stack-sm": "8px",
-                "stack-xl": "64px",
-                "container-max": "1280px"
-            },
-            "fontFamily": {
-                "display-lg": ["Montserrat", "sans-serif"],
-                "body-md": ["Montserrat", "sans-serif"],
-                "headline-xl": ["Montserrat", "sans-serif"],
-                "label-lg": ["Montserrat", "sans-serif"],
-                "headline-md": ["Montserrat", "sans-serif"],
-                "body-lg": ["Montserrat", "sans-serif"],
-                "headline-lg": ["Montserrat", "sans-serif"],
-                "label-md": ["Montserrat", "sans-serif"],
-                "body-sm": ["Montserrat", "sans-serif"]
-            }
-          }
-        }
-      }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WatchingAbroad — Watch Your Home TV Anywhere | VPN & Smart DNS Guides</title>
+<meta name="description" content="Practical, tested guides for expats and travellers. Watch BBC iPlayer, Netflix, and your home streaming services from anywhere. Honest VPN and Smart DNS comparisons."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/design-system.css"/>
 <style>
-      body { background-color: #0b1422; color: #e0e3e5; font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; }
-      .glass-panel { background: rgba(49, 57, 73, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-      .cyan-glow { box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
-      .cyan-glow-hover:hover { box-shadow: 0 0 30px rgba(56, 189, 248, 0.4); transition: all 0.3s ease; }
-      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    </style>
+  /* Page-specific overrides — kept minimal, system does the heavy lifting */
+  .hero-illustration {
+    max-width: 800px; margin: var(--space-2xl) auto 0;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--wa-border-light);
+    box-shadow: var(--elevation-3);
+  }
+  .hero-illustration img { width: 100%; height: auto; }
+  .methodology-strip {
+    display: flex; gap: var(--space-xl); justify-content: center;
+    flex-wrap: wrap; padding: var(--space-lg) 0;
+  }
+  .methodology-item {
+    display: flex; align-items: center; gap: var(--space-sm);
+    font-size: var(--fs-body-sm); color: var(--wa-text-muted);
+  }
+  .methodology-item .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--wa-accent);
+  }
+  .guide-card {
+    display: flex; flex-direction: column; height: 100%;
+  }
+  .guide-card .card-body {
+    flex: 1; display: flex; flex-direction: column;
+  }
+  .guide-card .card-body p {
+    flex: 1; font-size: var(--fs-body-sm); color: var(--wa-text-muted);
+  }
+  .guide-card .arrow {
+    display: inline-flex; align-items: center; gap: var(--space-xs);
+    font-size: var(--fs-label-md); font-weight: var(--fw-semibold);
+    color: var(--wa-accent); margin-top: var(--space-md);
+  }
+  .guide-card:hover .arrow { gap: var(--space-md); transition: gap var(--duration-short) var(--ease-standard); }
+  .cta-strip {
+    background: linear-gradient(135deg, rgba(142, 213, 255, 0.06), rgba(142, 213, 255, 0.02));
+    border: 1px solid rgba(142, 213, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl); text-align: center;
+  }
+</style>
 </head>
-<body class="overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(56,189,248,0.15)] transition-all duration-300 ease-in-out">
-<nav class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-primary">WatchingAbroad</div>
-<div class="hidden md:flex items-center gap-gutter">
-<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="#">Guides</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">VPN Reviews</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Streaming News</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Travel Gear</a>
-</div>
-<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-lg text-label-lg font-bold hover:bg-primary/90 transition-all cyan-glow">
-                Get VPN
-            </button>
+<body>
+
+<!-- ═══ Navigation ═══ -->
+<nav class="wa-nav" id="navbar">
+  <div class="wa-nav-inner">
+    <a href="." class="wa-nav-brand">WatchingAbroad</a>
+    <div class="wa-nav-links">
+      <a href="./guides" class="active">Guides</a>
+      <a href="#vpn-reviews">VPN Reviews</a>
+      <a href="#comparisons">Comparisons</a>
+      <a href="./guides/how-to-setup-smart-dns-apple-tv-fire-tv-router.html">Setup</a>
+    </div>
+    <a href="#vpn-reviews" class="btn btn-primary btn-small wa-nav-cta">Best VPN</a>
+  </div>
 </nav>
-</header>
-<!-- Hero Section -->
-<section class="relative pt-40 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
 
-<div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-stack-lg">
-<span class="inline-block py-1 px-4 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-label-md uppercase tracking-widest">
-                Expat Media Access
-            </span>
-<h1 class="font-display-lg text-display-lg md:leading-tight text-white">
-                Watch your home TV abroad without the usual confusion
-            </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                Practical, plain-English guides for expats, travellers, and families. Cut through the technical jargon and get back to your favourite shows in minutes.
-            </p>
-<div class="flex flex-col sm:flex-row gap-gutter pt-stack-md">
-<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-headline-md text-headline-md font-bold cyan-glow-hover transition-all">
-                    Explore Guides
-                </button>
-<button class="border border-surface-bright text-white px-8 py-4 rounded-lg font-headline-md text-headline-md font-medium hover:bg-white/5 transition-all">
-                    Troubleshoot Now
-                </button>
-</div>
-</div>
-<div class="mt-stack-xl flex justify-center">
-<div class="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden glass-panel p-2">
-<img class="w-full h-full object-cover rounded-lg" data-alt="A cinematic wide shot of a modern, dimly lit living room with a large high-definition smart television screen displaying a vibrant streaming interface. The room has deep blue and cyan ambient lighting reflecting off sleek, dark surfaces. A comfortable sofa is visible in the foreground, creating a high-end, relaxed atmosphere. The visual style is premium tech, with a focus on deep blacks and brilliant cyan accents consistent with a dark-themed digital streaming service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVl7fJMgkscZLfOZxFcsux2ZjEsC5bJ-A2MsGFelCtoHwJ2U_iWljfzPXab6kmH3fYLe7bh9CTSGUk4vXe_7LBjXyVclfzXlTy9xrU86fNbRqhUFyG62KCn69LsrutC5fF2hG6MRSOhzLrEKDtZSWT-0KrSEiXWzyTsmz8jSDfh1LY5Cf_r7grN42QYBu_DliTTj7PGgnY_Jwc8RK6OZsuce2wVALJN9cKRbb8WGdtu0m7j2O_p7R4JK_waLBW15cfa7OPSCcRB2oy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0b1422] via-transparent to-transparent"></div>
-</div>
-</div>
+<!-- ═══ Hero ═══ -->
+<section class="hero">
+  <div class="container">
+    <span class="badge badge-outline hero-badge">UPDATED JUNE 2026</span>
+    <h1 class="display-lg">Watch your home TV<br/>from anywhere on Earth</h1>
+    <p>Honest, hands-on guides for expats and travellers. No jargon. No sponsored rankings. Just what actually works for BBC iPlayer, Netflix, and your favourite streaming services abroad.</p>
+    <div class="hero-actions">
+      <a href="#vpn-reviews" class="btn btn-primary btn-large">See top VPNs →</a>
+      <a href="./guides" class="btn btn-outline btn-large">Browse all guides</a>
+    </div>
+    <div class="methodology-strip">
+      <div class="methodology-item"><span class="dot"></span> Tested June 2026</div>
+      <div class="methodology-item"><span class="dot"></span> 7 VPNs compared</div>
+      <div class="methodology-item"><span class="dot"></span> Smart DNS tested</div>
+      <div class="methodology-item"><span class="dot"></span> No sponsored rankings</div>
+    </div>
+    <div class="hero-illustration">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVl7fJMgkscZLfOZxFcsux2ZjEsC5bJ-A2MsGFelCtoHwJ2U_iWljfzPXab6kmH3fYLe7bh9CTSGUk4vXe_7LBjXyVclfzXlTy9xrU86fNbRqhUFyG62KCn69LsrutC5fF2hG6MRSOhzLrEKDtZSWT-0KrSEiXWzyTsmz8jSDfh1LY5Cf_r7grN42QYBu_DliTTj7PGgnY_Jwc8RK6OZsuce2wVALJN9cKRbb8WGdtu0m7j2O_p7R4JK_waLBW15cfa7OPSCcRB2oy" alt="Modern living room with streaming TV setup, deep blue ambient lighting" width="800" height="450" loading="eager"/>
+    </div>
+  </div>
 </section>
-<!-- Essential Knowledge -->
-<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-xl gap-gutter">
-<div class="max-w-xl">
-<h2 class="font-headline-xl text-headline-xl text-white mb-stack-sm">Essential Knowledge</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Everything you need to know to get started — explained simply.</p>
-</div>
-<div class="flex items-center gap-stack-sm text-primary font-label-lg text-label-lg">
-                See all basics
-                <span class="material-symbols-outlined">arrow_forward</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Card 1 -->
-<div class="glass-panel p-stack-lg rounded-xl hover:translate-y-[-4px] transition-transform duration-300">
-<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-stack-md text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-stack-sm">Smart DNS vs VPN</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Understand the difference between changing your location and securing your connection. Which one do you actually need?</p>
-<a class="text-primary font-label-lg text-label-lg hover:underline underline-offset-4" href="#">Learn more</a>
-</div>
-<!-- Card 2 -->
-<div class="glass-panel p-stack-lg rounded-xl hover:translate-y-[-4px] transition-transform duration-300 border-primary/20 bg-surface-bright/50">
-<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-stack-md text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">devices</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-stack-sm">Device setup guides</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Step-by-step instructions for smart TVs, streaming sticks, gaming consoles, and mobile devices.</p>
-<a class="text-primary font-label-lg text-label-lg hover:underline underline-offset-4" href="#">See devices</a>
-</div>
-<!-- Card 3 -->
-<div class="glass-panel p-stack-lg rounded-xl hover:translate-y-[-4px] transition-transform duration-300">
-<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-stack-md text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">build</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-stack-sm">Streaming troubleshooting</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Fix proxy errors, slow buffering, and login issues with our simple troubleshooting guides.</p>
-<a class="text-primary font-label-lg text-label-lg hover:underline underline-offset-4" href="#">Fix errors</a>
-</div>
-</div>
+
+<!-- ═══ Essential Guides ═══ -->
+<section class="section" id="guides">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="headline-lg">Essential knowledge</h2>
+        <p>Start here. These foundational guides explain the two technologies that make watching abroad possible — and which one fits your situation.</p>
+      </div>
+      <a href="./guides" class="label-lg">View all →</a>
+    </div>
+    <div class="grid-3">
+      <a href="./guides/smart-dns-vs-vpn.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <span class="chip chip-accent" style="margin-bottom:var(--space-md);">Popular</span>
+          <h3 class="title-lg" style="margin-bottom:var(--space-sm);">Smart DNS vs VPN</h3>
+          <p>Change your location or secure your connection — or both. Understand the trade-offs so you pick the right tool.</p>
+          <span class="arrow">Read guide →</span>
+        </div>
+      </a>
+      <a href="./guides/how-to-setup-smart-dns-apple-tv-fire-tv-router.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <span class="chip chip-accent" style="margin-bottom:var(--space-md);">Step-by-step</span>
+          <h3 class="title-lg" style="margin-bottom:var(--space-sm);">Device setup guides</h3>
+          <p>Smart TV, Apple TV, Fire Stick, gaming console, or router — we cover every device in plain English.</p>
+          <span class="arrow">Set up now →</span>
+        </div>
+      </a>
+      <a href="./guides/watch-streaming-while-travelling-checklist.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <span class="chip chip-accent" style="margin-bottom:var(--space-md);">Checklist</span>
+          <h3 class="title-lg" style="margin-bottom:var(--space-sm);">Pre-travel streaming checklist</h3>
+          <p>Everything to set up before you board the plane. Avoid the panic when your show won't load at the hotel.</p>
+          <span class="arrow">Pack list →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- Latest Practical Guides -->
-<section class="py-stack-xl bg-surface-container-lowest/50">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<h2 class="font-headline-xl text-headline-xl text-white mb-stack-xl text-center">Latest Practical Guides</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Guide Item 1 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="/guides/how-to-watch-bbc-iplayer-abroad.html">
-<span class="text-4xl mb-stack-md block">📺</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">How to watch BBC iPlayer abroad — step-by-step for expats</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 2 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="/guides/best-vpn-for-expats-2026.html">
-<span class="text-4xl mb-stack-md block">🌎</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">Best VPNs for Expats 2026 — 7 streaming VPNs tested</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 3 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="/guides/vpn-apple-tv-options-limitations-setup.html">
-<span class="text-4xl mb-stack-md block">💻</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">VPN on Apple TV — options, limitations, and setup guide</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 4 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="#">
-<span class="text-4xl mb-stack-md block">⚠️</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">Fixing Amazon Prime 'Traveling Outside' errors</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 5 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="/guides/watch-streaming-while-travelling-checklist.html">
-<span class="text-4xl mb-stack-md block">🏏</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">How to watch streaming apps while travelling — checklist</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 6 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="#">
-<span class="text-4xl mb-stack-md block">📱</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">Downloading offline content before you fly: A guide</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 7 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all" href="/guides/best-smart-dns-streaming.html">
-<span class="text-4xl mb-stack-md block">👨‍👩‍👧</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">Best Smart DNS services for streaming — 2026 comparison</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-<!-- Guide Item 8 -->
-<a class="group glass-panel p-gutter rounded-xl flex flex-col justify-between hover:bg-primary/5 transition-all border-error/20" href="/guides/why-we-built-watchingabroad.html">
-<span class="text-4xl mb-stack-md block">🔐</span>
-<h4 class="font-headline-md text-body-lg font-bold text-white group-hover:text-primary transition-colors">Why we built WatchingAbroad — and who really owns the VPN review sites</h4>
-<span class="material-symbols-outlined mt-stack-md text-on-surface-variant group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-</a>
-</div>
-</div>
+
+<!-- ═══ VPN Reviews ═══ -->
+<section class="section" id="vpn-reviews" style="background: var(--color-surface-container-lowest);">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="headline-lg">Top VPNs for streaming abroad</h2>
+        <p>Ranked by actual streaming performance — not by who pays the highest commission. Tested against BBC iPlayer, Netflix UK, ITVX, and more.</p>
+      </div>
+      <a href="./guides/best-vpn-for-expats-2026.html" class="label-lg">Full comparison →</a>
+    </div>
+
+    <!-- #1 NordVPN -->
+    <div class="review-card" style="margin-bottom:var(--space-lg);">
+      <div class="review-card-rank">#1</div>
+      <div class="review-card-body">
+        <h3>NordVPN</h3>
+        <p>Best overall for streaming. Unblocks BBC iPlayer, Netflix, ITVX, and 15+ UK libraries. Obfuscated servers defeat VPN blocks. Smart DNS included.</p>
+        <div class="review-card-pros">
+          <span class="chip chip-success">10 Gbps servers</span>
+          <span class="chip chip-success">Smart DNS</span>
+          <span class="chip chip-success">30-day money-back</span>
+        </div>
+      </div>
+      <div class="review-card-score">
+        <div class="score">9.4</div>
+        <div class="label">/10</div>
+      </div>
+    </div>
+
+    <!-- #2 Surfshark -->
+    <div class="review-card" style="margin-bottom:var(--space-lg);">
+      <div class="review-card-rank">#2</div>
+      <div class="review-card-body">
+        <h3>Surfshark</h3>
+        <p>Best value. Unlimited devices, excellent streaming speeds, and consistent BBC iPlayer unblocking. Includes Smart DNS and ad-blocker.</p>
+        <div class="review-card-pros">
+          <span class="chip chip-success">Unlimited devices</span>
+          <span class="chip chip-success">Smart DNS</span>
+          <span class="chip chip-warning">Fewer UK servers</span>
+        </div>
+      </div>
+      <div class="review-card-score">
+        <div class="score">8.8</div>
+        <div class="label">/10</div>
+      </div>
+    </div>
+
+    <!-- #3 CyberGhost -->
+    <div class="review-card" style="margin-bottom:var(--space-lg);">
+      <div class="review-card-rank">#3</div>
+      <div class="review-card-body">
+        <h3>CyberGhost</h3>
+        <p>Streaming-optimised servers. Pre-configured for BBC iPlayer, Netflix, and specific streaming services. One-click setup for beginners.</p>
+        <div class="review-card-pros">
+          <span class="chip chip-success">Streaming profiles</span>
+          <span class="chip chip-success">45-day refund</span>
+          <span class="chip chip-warning">Fewer advanced features</span>
+        </div>
+      </div>
+      <div class="review-card-score">
+        <div class="score">8.3</div>
+        <div class="label">/10</div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Editorial Promise Section -->
-<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-xl items-center">
-<div class="relative rounded-2xl overflow-hidden shadow-2xl">
-<img class="w-full h-[400px] object-cover" data-alt="A professional technician's workspace with multiple streaming devices including an Apple TV, Fire Stick, and a laptop showing network analysis graphs. The lighting is focused and moody, utilizing the brand's cyan and deep navy color scheme. The environment suggests rigorous testing and expertise, with high-quality gear arranged neatly on a dark wooden surface. The atmosphere is one of authority, precision, and high-tech reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMjECjMauJIHZwmR3P4YGvwxxn1bxc504W1rfE48auAyrzScH3YEThwh6yx7xM3-AyriiC3pEmA2gCsJYpXSqcrKifjrKB7Fii6ouIoWN2h-7tG-oTxkoJ09R2Q9ix--SrA9KcN2l_reSmV1jikReX0tIs-oOWx-p5yGFdJ372wnsgS5IsHPyqwglyShWeyTEWvNPzIfCj6BKabQxuT4YuFBYX6rhhj39nHH1mDoZlysDb09xLqj_mwnHZPRH9KmzPov55wi7SIwN"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-</div>
-<div class="space-y-stack-lg">
-<h2 class="font-headline-xl text-headline-xl text-white">Editorial Promise</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                We believe accessing content you pay for shouldn't require a computer science degree. Our guides are built on hands-on testing, not marketing fluff.
-            </p>
-<ul class="space-y-stack-md">
-<li class="flex items-start gap-stack-md">
-<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">verified</span>
-<div>
-<strong class="text-white font-headline-md text-body-lg">Tested Daily</strong>
-<p class="font-body-sm text-body-sm text-on-surface-variant">We verify our methods every 24 hours against popular streaming platforms.</p>
-</div>
-</li>
-<li class="flex items-start gap-stack-md">
-<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">no_accounts</span>
-<div>
-<strong class="text-white font-headline-md text-body-lg">Zero Jargon</strong>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Simple instructions that your grandma or your kids could follow easily.</p>
-</div>
-</li>
-<li class="flex items-start gap-stack-md">
-<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
-<div>
-<strong class="text-white font-headline-md text-body-lg">Privacy First</strong>
-<p class="font-body-sm text-body-sm text-on-surface-variant">We only recommend tools that protect your data while they unblock your show.</p>
-</div>
-</li>
-</ul>
-</div>
+
+<!-- ═══ Latest Guides ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="headline-lg">Latest practical guides</h2>
+        <p>Step-by-step walkthroughs for specific streaming services, devices, and troubleshooting scenarios.</p>
+      </div>
+    </div>
+    <div class="grid-4">
+      <a href="./guides/how-to-watch-bbc-iplayer-abroad.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <h3 class="title-md" style="margin-bottom:var(--space-sm);">How to watch BBC iPlayer abroad</h3>
+          <p>The complete 2026 setup — VPN, Smart DNS, and account tricks.</p>
+          <span class="arrow">Read →</span>
+        </div>
+      </a>
+      <a href="./guides/best-vpn-for-expats-2026.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <h3 class="title-md" style="margin-bottom:var(--space-sm);">Best VPNs for expats 2026</h3>
+          <p>7 VPNs tested for streaming. Full comparison table with speeds.</p>
+          <span class="arrow">Compare →</span>
+        </div>
+      </a>
+      <a href="./guides/vpn-apple-tv-options-limitations-setup.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <h3 class="title-md" style="margin-bottom:var(--space-sm);">VPN on Apple TV</h3>
+          <p>Options, limitations, and setup guide for tvOS users.</p>
+          <span class="arrow">Set up →</span>
+        </div>
+      </a>
+      <a href="./guides/best-smart-dns-streaming.html" class="card card-hover guide-card" style="text-decoration:none;color:inherit;">
+        <div class="card-body">
+          <h3 class="title-md" style="margin-bottom:var(--space-sm);">Best Smart DNS for streaming</h3>
+          <p>2026 comparison: speed, compatibility, and pricing.</p>
+          <span class="arrow">Compare →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- Footer -->
-<footer class="w-full py-stack-xl bg-surface-container-lowest border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
-<div class="flex flex-col gap-stack-sm mb-stack-md md:mb-0">
-<div class="font-headline-sm text-headline-sm font-bold text-primary">WatchingAbroad</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center md:text-left">
-                    Helping you stay connected to home, wherever you roam.
-                </p>
-</div>
-<div class="flex flex-wrap justify-center gap-gutter">
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-opacity duration-200" href="#">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-opacity duration-200" href="#">Terms of Service</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-opacity duration-200" href="#">Contact Us</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-opacity duration-200" href="/disclosure/">Affiliate Disclosure</a>
-</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant opacity-60 mt-stack-md md:mt-0">
-                © 2026 WatchingAbroad. All rights reserved.
+
+<!-- ═══ Editorial Promise ═══ -->
+<section class="section" style="background: var(--color-surface-container-lowest);">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;">
+      <div>
+        <span class="badge badge-outline" style="margin-bottom:var(--space-md);">Our promise</span>
+        <h2 class="headline-lg" style="margin-bottom:var(--space-lg);">We tell you what actually works</h2>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <div class="icon">✓</div>
+            <div>
+              <h4>Tested every 24 hours</h4>
+              <p>We verify VPN and Smart DNS services daily against BBC iPlayer, Netflix, ITVX, and more. If something breaks, we update the guide immediately.</p>
             </div>
-</div>
+          </li>
+          <li class="feature-item">
+            <div class="icon">🔍</div>
+            <div>
+              <h4>No sponsored rankings</h4>
+              <p>VPN review sites routinely rank by affiliate commission. We rank by what actually works for streaming — and we're transparent about our methodology.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="icon">🔒</div>
+            <div>
+              <h4>Privacy-first recommendations</h4>
+              <p>We only recommend services with audited no-log policies, strong encryption, and transparent ownership. Your data stays yours.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div style="position:relative;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMjECjMauJIHZwmR3P4YGvwxxn1bxc504W1rfE48auAyrzScH3YEThwh6yx7xM3-AyriiC3pEmA2gCsJYpXSqcrKifjrKB7Fii6ouIoWN2h-7tG-oTxkoJ09R2Q9ix--SrA9KcN2l_reSmV1jikReX0tIs-oOWx-p5yGFdJ372wnsgS5IsHPyqwglyShWeyTEWvNPzIfCj6BKabQxuT4YuFBYX6rhhj39nHH1mDoZlysDb09xLqj_mwnHZPRH9KmzPov55wi7SIwN" alt="Professional streaming test setup with multiple devices and network monitoring" width="600" height="400" loading="lazy" style="border-radius:var(--radius-xl); width:100%;"/>
+        <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(142,213,255,0.05), transparent 60%); border-radius:var(--radius-xl); pointer-events:none;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA Strip ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-strip">
+      <h2 class="headline-md" style="margin-bottom:var(--space-md);">Still not sure which VPN you need?</h2>
+      <p style="color:var(--wa-text-muted); margin-bottom:var(--space-xl); max-width:32rem; margin-left:auto; margin-right:auto;">Read our in-depth comparison — 7 VPNs tested, side-by-side, with real streaming results. No marketing fluff.</p>
+      <a href="./guides/best-vpn-for-expats-2026.html" class="btn btn-primary btn-large">See the full comparison →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="wa-footer">
+  <div class="wa-footer-inner">
+    <div>
+      <div class="wa-footer-brand">WatchingAbroad</div>
+      <p style="font-size:var(--fs-body-sm); color:var(--wa-text-muted); margin-top:var(--space-xs); max-width:18rem;">Helping you stay connected to home, wherever you roam.</p>
+    </div>
+    <div class="wa-footer-links">
+      <a href="./guides">Guides</a>
+      <a href="./disclosure">Affiliate Disclosure</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="wa-footer-copy">© 2026 WatchingAbroad</div>
+  </div>
 </footer>
+
 <script>
-        // Simple scroll interaction for Header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-1', 'bg-surface/95');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-1', 'bg-surface/95');
-                header.classList.add('h-20');
-            }
-        });
-
-        // Intersection observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
-        });
-    </script>
-</body></html>
+  // Navbar scroll effect
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+</body>
+</html>

@@ -174,6 +174,22 @@
       .meta { color: #7f8fa0; }
     }
   </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/design-system.css"/>
+<style>
+  /* Design system overrides for legacy guide styles */
+  :root {
+    --bg: var(--color-surface, #101415);
+    --panel: var(--color-surface-container, #1D2022);
+    --text: var(--color-on-surface, #E0E3E5);
+    --muted: var(--color-on-surface-variant, #BDC8D1);
+    --accent: var(--color-primary, #8ED5FF);
+    --line: var(--color-outline-variant, #3E484F);
+  }
+  body { background: var(--bg); font-family: var(--wa-font); }
+</style>
     <meta property="og:title" content="How to Watch BBC iPlayer Abroad in 2026 — Step-by-Step Guide" />
     <meta property="og:description" content="Watch BBC iPlayer from anywhere in the world. Tested step-by-step guide for expats and travellers using VPN and Smart DNS. Works in 2026." />
     <meta property="og:url" content="https://watchingabroad.com/guides/how-to-watch-bbc-iplayer-abroad.html" />
@@ -184,8 +200,20 @@
     <meta name="twitter:description" content="Watch BBC iPlayer from anywhere in the world. Tested step-by-step guide for expats and travellers using VPN and Smart DNS. Works in 2026." />
   </head>
 <body>
+
+<nav class="wa-nav" id="navbar">
+  <div class="wa-nav-inner">
+    <a href=".." class="wa-nav-brand">WatchingAbroad</a>
+    <div class="wa-nav-links">
+      <a href="../#guides">Guides</a>
+      <a href="../#vpn-reviews">VPN Reviews</a>
+      <a href="./">All articles</a>
+    </div>
+  </div>
+</nav>
+
   <main>
-    <div class="back"><a href="/">← WatchingAbroad</a></div>
+    <div class="back"><a href="..">← WatchingAbroad</a></div>
     <h1>How to Watch BBC iPlayer Abroad in 2026 — Step-by-Step Guide for Expats</h1>
     <div class="meta">Updated June 15, 2026 · 12 min read · By WatchingAbroad Team</div>
 
@@ -315,19 +343,19 @@
       <li>Restart the BBC iPlayer app — it should now load</li>
     </ol>
 
-    <p>For a full walkthrough, see our <a href="/guides/vpn-apple-tv-options-limitations-setup.html">VPN on Apple TV guide</a> for detailed setup instructions for each VPN provider.</p>
+    <p>For a full walkthrough, see our <a href="./vpn-apple-tv-options-limitations-setup.html">VPN on Apple TV guide</a> for detailed setup instructions for each VPN provider.</p>
 
     <h3>Option B: Dedicated Smart DNS service</h3>
     <p>If you want a solution that's purely about unblocking (no VPN, no encryption), a dedicated Smart DNS provider is the better choice. Services like Smart DNS Proxy are built specifically for this use case and tend to be very reliable for BBC iPlayer specifically.</p>
 
-    <p>See our <a href="/guides/smart-dns-vs-vpn.html">Smart DNS vs VPN comparison</a> and our <a href="/guides/best-smart-dns-streaming.html">best Smart DNS services guide</a> for detailed comparisons.</p>
+    <p>See our <a href="./smart-dns-vs-vpn.html">Smart DNS vs VPN comparison</a> and our <a href="./best-smart-dns-streaming.html">best Smart DNS services guide</a> for detailed comparisons.</p>
 
     <div class="tip-box">
       <h3>📺 Which method should you use?</h3>
       <ul>
         <li><strong>Laptop or phone:</strong> Use a VPN (Method 1) — it's the most reliable, and setup takes 2 minutes</li>
         <li><strong>Apple TV or smart TV:</strong> Use Smart DNS or a VPN with Smart DNS — VPN apps don't work on these devices natively</li>
-        <li><strong>Router-level setup:</strong> Install a VPN on your router to protect every device automatically — <a href="/guides/smart-dns-vs-vpn.html" style="color: var(--accent);">read our comparison guide</a></li>
+        <li><strong>Router-level setup:</strong> Install a VPN on your router to protect every device automatically — <a href="./smart-dns-vs-vpn.html" style="color: var(--accent);">read our comparison guide</a></li>
         <li><strong>Fire TV Stick:</strong> Install the VPN app directly from the Amazon Appstore — no Smart DNS needed</li>
       </ul>
     </div>
@@ -453,7 +481,7 @@
     <p>Yes — a VPN that unblocks BBC iPlayer also unblocks live BBC channels (BBC One, BBC Two, BBC News, etc.) when streamed through iPlayer. Just connect to a UK server and open the live TV section.</p>
 
     <h3>Can I watch ITVX, Channel 4, and Channel 5 abroad too?</h3>
-    <p>Yes — most VPNs that work with BBC iPlayer also work with ITVX and Channel 4's streaming services. The BBC has the most aggressive VPN blocking of any UK streaming service, so if a VPN works with iPlayer, it will almost certainly work with the others. For a full comparison of methods, see our <a href="/guides/smart-dns-vs-vpn.html">Smart DNS vs VPN guide</a>.</p>
+    <p>Yes — most VPNs that work with BBC iPlayer also work with ITVX and Channel 4's streaming services. The BBC has the most aggressive VPN blocking of any UK streaming service, so if a VPN works with iPlayer, it will almost certainly work with the others. For a full comparison of methods, see our <a href="./smart-dns-vs-vpn.html">Smart DNS vs VPN guide</a>.</p>
 
     <h3>Does BBC iPlayer work abroad in 2026? Has anything changed?</h3>
     <p>Yes, BBC iPlayer still works abroad with the right VPN in 2026. The BBC has not introduced any new restrictions that fundamentally change the equation — they continue to block VPN IPs aggressively, and top VPNs continue to stay ahead of those blocks. The same methods that worked in 2025 continue to work in 2026, provided you use a VPN that actively invests in streaming unblocking.</p>
@@ -478,8 +506,28 @@
 
     <footer>
       <p><strong>Affiliate disclosure:</strong> Some links in this guide are affiliate links. If you purchase a service through one of our links, we may earn a commission. Our recommendations are based on actual testing — affiliate relationships do not affect our rankings.</p>
-      <p>© 2026 WatchingAbroad. Independent guides for watching your home TV abroad. Compare <a href="/guides/smart-dns-vs-vpn.html">Smart DNS vs VPN</a>, find the <a href="/guides/best-vpn-for-expats-2026.html">best VPNs for expats</a>, or see our <a href="/guides/best-smart-dns-streaming.html">Smart DNS service comparison</a>.</p>
+      <p>© 2026 WatchingAbroad. Independent guides for watching your home TV abroad. Compare <a href="./smart-dns-vs-vpn.html">Smart DNS vs VPN</a>, find the <a href="./best-vpn-for-expats-2026.html">best VPNs for expats</a>, or see our <a href="./best-smart-dns-streaming.html">Smart DNS service comparison</a>.</p>
     </footer>
   </main>
+
+<footer class="wa-footer">
+  <div class="wa-footer-inner">
+    <div>
+      <div class="wa-footer-brand">WatchingAbroad</div>
+      <p style="font-size:var(--fs-body-sm); color:var(--wa-text-muted); margin-top:var(--space-xs);">Independent streaming guides for expats and travellers.</p>
+    </div>
+    <div class="wa-footer-links">
+      <a href="../disclosure/">Affiliate Disclosure</a>
+      <a href="./">All guides</a>
+    </div>
+    <div class="wa-footer-copy">© 2026 WatchingAbroad</div>
+  </div>
+</footer>
+<script>
+  document.getElementById('navbar') && window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
 </body>
 </html>
